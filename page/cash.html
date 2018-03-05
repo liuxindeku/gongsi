@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>提现</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--提现-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif"/></div>
+				<div id="cash" style="display: none;">
+					<div class="bankbox">
+						<!--<div class="bank_logo"></div>-->
+						<img class="yhbg" style="float: left;margin-top:22px;margin-left: 15px;width: 150px;margin-right: -30px;" />
+						<div class="bank_name">
+							<h1 id="bank_name">银行</h1>
+							<h2>尾号<span  id="bank_code"></span></h2>
+						</div>
+					</div>
+					<div class="bank_tx">
+						<div class="bank_tx_ti">
+							<h1>账户可提金额：</h1>
+							<h2 id="use_money">0.00</h2>
+							
+						</div>
+						<div class="bank_zdm">每日剩余免费提现：<span id="free_num">1</span>次</div>
+						<div class="bank_tx_ti">
+							<h1>未投可提金额：</h1>
+							<h2 id="balance_frost">0.00</h2>
+							<div style="position: absolute;right: 0;transform: scale(0.4);" class="wenhao"><img src="../images/wenhao.png"/></div>
+						</div>
+						<div style="
+							display: none;
+							padding: 20px;
+							background-color: #fff;
+							position: absolute;
+							top:100px;
+							border-radius: 10px;
+							box-shadow: 5px 5px 5px #ccc,-5px 5px 5px #ccc;
+							margin: 40px 45px;" 
+							id="hhhh"></div>
+						<div class="bank_tx_cont">
+							<h1>提现金额（元）</h1>
+							<h2>￥</h2>
+							<input type="number" placeholder="请输入提现金额" class="bank_tx_je" id="rc_money"  oninput='this.value=this.value.replace(/^[0]+[0-9]*$/gi,"")'    onkeyup="num(this)" />
+						</div>
+						<div class="bank_zd">手续费：<span id="withdraw_fee">0.00</span>元</div>
+					</div>
+					<input type="hidden" id="withdraw_ratio" value=3>
+					<button class="cz_true mui-btn-red cz_bnt">申请提现</button>
+					<div class="czjl och_hist_cash">提现记录</div>
+				</div>
+				
+				<div class="nothing notha">
+					<img src="../images/nothig/smrz_not.png" />
+					<h1>您还没有实名认证，不能进行提现哦~</h1>
+					<button class="noth_btn och_certification">立即去认证</button>
+				</div>
+				<div class="nothing nothb">
+					<img src="../images/nothig/xx_not.png"/>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" name="jzh_open" id="jzh_open" value="0">
+		<div class="jymm_box">
+			<div class="jymm">
+				<h1>请输入交易密码</h1>
+				<h2>提现</h2>
+				<h3>￥<span>0.00</span></h3>
+				<input type="password" placeholder="请输入交易密码" required="" id="paypwd" autocomplete="off"/>
+				<ul>
+					<li class="tx_close">取消</li>
+					<li class="tx_true tx_bnt">确认</li>
+				</ul>
+			</div>
+		</div>
+		<form action="" method="post"  id="form2" >
+			
+		</form>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/cash.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				cash_de();
+			})
+		</script>
+	</body>
+
+</html>

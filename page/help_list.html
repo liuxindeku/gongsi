@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>帮助中心</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<!--帮助中心-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--<div id="loading"><img src="../img/loading2.gif" /></div>-->
+				<div id="help_list" v-cloak>
+					<div class="title_h1">常见自助服务</div>
+					<ul class="help_center">
+						<!--<li onclick="och('page/change_phone1.html','修改手机',1)">
+				<img src="../images/ymkj/helpico01.png" alt="" />
+				<h1>修改手机</h1>
+			</li>-->
+						<li class="och_find_logpwd1">
+							<img src="../images/ymkj/helpico02.png" />
+							<h1>修改登录密码</h1>
+						</li>
+						<li class="och_change_buspwd xgmma">
+							<img src="../images/ymkj/helpico03.png" />
+							<h1>修改交易密码</h1>
+						</li>
+						<li class="och_load_zc xgmmb" style="display: none;">
+							<img src="../images/ymkj/helpico03.png" />
+							<h1>修改交易密码</h1>
+						</li>
+					</ul>
+					<div class="title_h1">常见自助服务</div>
+					<ul class="user_li  help_li help_list">
+						<li v-for="help in helps" v-cloak v-bind:rid="help.id">
+							<h1 style="background-position: 0px 2px;" v-if="help.name=='账户类'"></h1>
+							<h1 style="background-position: 0px -35px;" v-else-if="help.name=='标的类'"></h1>
+							<h1 style="background-position: 0px -72px;" v-else-if="help.name=='回款类'"></h1>
+							<h1 style="background-position: 0px -112px;" v-else-if="help.name=='费用类'"></h1>
+							<h1 style="background-position: 0px -149px;" v-else-if="help.name=='充值与提现类'"></h1>
+							<h1 style="background-position: 0px -191px;" v-else-if="help.name=='红包与加息券类'"></h1>
+							<h1 style="background-position: 0px -229px;" v-else-if="help.name=='积分类'"></h1>
+							<h1 style="background-position: 0px -267px;" v-else-if="help.name=='邀请推广类'"></h1>
+							<h1 style="background-position: 0px -305px;" v-else></h1>
+							<h2>{{help.name}}</h2>
+							<h3></h3>
+						</li>
+
+						<!--<li>
+					<h1 style="background-position: 0px -304px;"></h1>
+					<h2>安全保障类</h2>
+					<h3></h3>
+				</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/help.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				help_list()
+			})
+		</script>
+	</body>
+
+</html>

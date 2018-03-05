@@ -1,0 +1,1386 @@
+{
+	"index.html": {
+		"resources": [
+			"fonts/lzd-app.ttf",
+			"css/fonts.css",
+			"js/common.js",
+			"fonts/icomoon.ttf",
+			"css/fontm.css",
+			"about_page.html",
+			"css/style.css",
+			"js/index.js",
+			"js/jquery.js",
+			"js/mui.min.js",
+			"js/mui.js",
+			"css/css.css",
+			"img/ymkj_nav01b.png",
+			"img/ymkj_nav04a.png",
+			"img/ymkj_nav03a.png",
+			"img/ymkj_nav02a.png",
+			"css/ymkj.css",
+			"img/ymkj_nav03b.png",
+			"img/ymkj_nav01a.png",
+			"img/ymkj_nav04b.png",
+			"img/ymkj_nav02b.png",
+			"fonts/vg/ymkjvgnav01b.svg",
+			"fonts/vg/ymkjvg103.svg",
+			"fonts/vg/ymkjvg108.svg",
+			"fonts/vg/ymkjvg104.svg",
+			"fonts/vg/ymkjvg105.svg",
+			"fonts/vg/ymkjvg109.svg",
+			"fonts/vg/ymkjvgnav03b.svg",
+			"fonts/vg/ymkjvgnav02b.svg",
+			"fonts/vg/ymkjvgnav04b.svg",
+			"css/jgjf.css",
+			"main.html",
+			"users.html",
+			"tender.html",
+			"error.html",
+			"images/ymkj/kf_bnt.png",
+			"images/ymkj/return_bnt.png",
+			"js/pagejs/update.js",
+			"images/ymkj/upgxbg02.png"
+		],
+		"refer": [
+			"main.html",
+			"about_page.html",
+			"sub.html",
+			"guide.html",
+			"users.html",
+			"tender.html",
+			"text.html",
+			"help_list.html",
+			"error.html",
+			"index_local.html",
+			"sub_local.html",
+			"index_index.html"
+		]
+	},
+	"main.html": {
+		"resources": [
+			"css/css.css",
+			"img/sale_blue_icon.png",
+			"images/index_p2.png",
+			"css/mui.min.css",
+			"images/index_lb.png",
+			"demo-files/demo.css",
+			"images/index_p1.png",
+			"js/common.js",
+			"css/fonts.css",
+			"css/fontm.css",
+			"css/style.css",
+			"js/jquery.js",
+			"images/pp_bg.jpg",
+			"images/7517_scrollpic_new_14958647792.jpg",
+			"js/mui.min.js",
+			"images/7517_scrollpic_new_14951757970.jpg",
+			"img/sale_gray_icon.png",
+			"images/7517_scrollpic_new_14957766080.png",
+			"images/7517_scrollpic_new_14957812889.jpg",
+			"main.html",
+			"js/jquery.min.js",
+			"img/sale_red_icon.png",
+			"img/ymkj_dcbz.png",
+			"img/ymkj_newper.png",
+			"img/ic.png",
+			"fonts/lzd-app.ttf",
+			"fonts/vg/ymkjvg101.svg",
+			"img/ymkj_dcbz.jpg",
+			"fonts/vg/ymkjvg107.svg",
+			"fonts/vg/ymkjvg106.svg",
+			"fonts/vg/ymkjvg100.svg",
+			"fonts/vg/ymkjvg108.svg",
+			"css/ymkj.css",
+			"img/ymkjnewbg.png",
+			"fonts/vg/ymkjvg102.svg",
+			"img/newbntbg.png",
+			"img/icon_limit_guarantee.png",
+			"css/jgjf.css",
+			"images/safety_04c.png",
+			"images/safety_02c.png",
+			"css/style1.css",
+			"js/jquery-2.1.1.min.js",
+			"images/safety_03c.png",
+			"images/safety_03a.png",
+			"images/safety_02b.png",
+			"js/jquery.touchSwipe.min.js",
+			"images/safety_04a.png",
+			"images/safety_01a.png",
+			"images/safety_02a.png",
+			"images/safety_01b.png",
+			"images/ladown.png",
+			"images/safety_01c.png",
+			"images/safety_04b.png",
+			"images/safety_03b.png",
+			"safety.html",
+			"img/weixin.png",
+			"images/ymkj/newper.png",
+			"js/pagejs/main.js",
+			"js/vue.js",
+			"images/banner01.png",
+			"images/banner02.png",
+			"js/pagejs/down.js",
+			"js/mui.js",
+			"js/pagejs/update.js",
+			"images/ymkj/upgxbg01.png",
+			"img/loading2.gif",
+			"images/8��P.png",
+			"css/default.css",
+			"images/touming.png",
+			"images/yellowmoney.png",
+			"images/right.png",
+			"css/index1.css",
+			"images/qiandao.png",
+			"images/zan.png",
+			"images/shouyi.png"
+		],
+		"refer": [
+			"sub.html",
+			"safety.html",
+			"index.html",
+			"sub_local.html"
+		]
+	},
+	"about_page.html": {
+		"resources": [
+			"img/ic.png",
+			"img/ic_right_arraw.png",
+			"css/fonts.css",
+			"js/common.js",
+			"css/fontm.css",
+			"css/style.css",
+			"js/jquery.js",
+			"js/mui.min.js",
+			"about_page.html",
+			"img/right_jtbg.png",
+			"img/rz02.png",
+			"img/about_more.png",
+			"img/rz01.png",
+			"img/pertx.png",
+			"css/ymkj.css",
+			"css/jgjf.css",
+			"js/jquery.min.js",
+			"css/css.css",
+			"css/mui.min.css",
+			"js/vue.js",
+			"js/pagejs/about_page.js",
+			"js/pagejs/down.js",
+			"img/loading2.gif",
+			"images/jxhd.png"
+		],
+		"refer": [
+			"sub.html",
+			"sub_local.html"
+		]
+	},
+	"sub.html": {
+		"resources": [
+			"img/loading.gif",
+			"js/common.js",
+			"css/style.css",
+			"js/jquery.js",
+			"js/mui.min.js",
+			"help_list.html"
+		],
+		"refer": [
+			"help_list.html"
+		]
+	},
+	"error.html": {
+		"resources": [
+			"img/error.png",
+			"js/common.js",
+			"css/style.css",
+			"js/jquery.js",
+			"images/nothig/wl_not.png",
+			"css/jgjf.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"users.html": {
+		"resources": [
+			"css/css.css",
+			"js/common.js",
+			"css/fonts.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/fontm.css",
+			"css/style.css",
+			"demo-files/demo.css",
+			"js/jquery.js",
+			"fonts/lzd-app.ttf",
+			"demo-files/demo.js",
+			"fonts/icomoon.ttf",
+			"fonts/login.ttf",
+			"img/loading.gif",
+			"users.html",
+			"img/zhbg.png",
+			"css/ymkj.css",
+			"img/mrqd.png",
+			"img/right_jtbg.png",
+			"img/zh_icbg.png",
+			"img/perimg.png",
+			"img/jdt.png",
+			"img/calcbg.png",
+			"css/jgjf.css",
+			"img/qdcg.png",
+			"js/pagejs/users.js",
+			"js/vue.js",
+			"img/about_more.png",
+			"js/pagejs/down.js",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub.html",
+			"sub_local.html"
+		]
+	},
+	"tender.html": {
+		"resources": [
+			"img/sale_blue_icon.png",
+			"img/sale_gray_icon.png",
+			"css/css.css",
+			"js/common.js",
+			"css/fonts.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"demo-files/demo.css",
+			"js/jquery.js",
+			"js/jquery.min.js",
+			"tender.html",
+			"img/sale_red_icon.png",
+			"css/style.css",
+			"css/ymkj.css",
+			"css/jgjf.css",
+			"images/ymkj/jdt.png",
+			"images/ymkj/newper_b.png",
+			"images/ymkj/newper.png",
+			"js/pagejs/users.js",
+			"js/pagejs/tender.js",
+			"js/vue.js",
+			"js/pagejs/down.js",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub.html",
+			"sub_local.html"
+		]
+	},
+	"text.html": {
+		"resources": [
+			"img/error.png"
+		],
+		"refer": []
+	},
+	"guide.html": {
+		"resources": [
+			"css/mui.min.css",
+			"images/guid01.png",
+			"images/guid02.png",
+			"images/guid03.png",
+			"js/common.js",
+			"js/mui.min.js",
+			"images/qdlb/1.png",
+			"images/qdlb/4.png",
+			"images/qdlb/3.png",
+			"images/qdlb/2.png"
+		],
+		"refer": []
+	},
+	"safety.html": {
+		"resources": [
+			"images/safety_04c.png",
+			"images/safety_02c.png",
+			"css/jgjf.css",
+			"css/style1.css",
+			"js/jquery-2.1.1.min.js",
+			"css/fonts.css",
+			"images/safety_03c.png",
+			"images/safety_03a.png",
+			"images/safety_02b.png",
+			"js/jquery.touchSwipe.min.js",
+			"css/ymkj.css",
+			"css/css.css",
+			"images/safety_04a.png",
+			"images/safety_01a.png",
+			"images/safety_02a.png",
+			"images/safety_01b.png",
+			"images/ladown.png",
+			"images/safety_01c.png",
+			"images/safety_04b.png",
+			"images/safety_03b.png"
+		],
+		"refer": []
+	},
+	"help_list.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/fonts.css",
+			"js/jquery.min.js",
+			"images/ymkj/help_ico.png",
+			"images/ymkj/helpico05.png",
+			"css/ymkj.css",
+			"img/right_jtbg.png",
+			"images/ymkj/helpico04.png",
+			"css/css.css",
+			"images/ymkj/helpico01.png",
+			"images/ymkj/helpico06.png",
+			"images/ymkj/helpico02.png",
+			"images/ymkj/helpico03.png"
+		],
+		"refer": []
+	},
+	"sub_local.html": {
+		"resources": [
+			"help_list.html",
+			"page/about_us.html",
+			"img/loading.gif",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/style.css",
+			"js/jquery.js",
+			"page/safety.html",
+			"page/person_infor.html",
+			"page/tender_detail.html",
+			"page/login.html",
+			"page/help_list.html",
+			"page/my_invest.html",
+			"page/load_zc.html",
+			"page/recharge.html",
+			"page/notice_list.html",
+			"page/cash.html",
+			"page/my_news.html",
+			"page/know_us.html",
+			"page/coupon_look.html",
+			"images/ymkj/back_bnt.png",
+			"images/ymkj/kf_bnt.png",
+			"images/ymkj/return_bnt.png",
+			"page/hist_busin.html",
+			"page/custom.html",
+			"img/loading2.gif",
+			"page/invite.html",
+			"page/activity.html",
+			"page/banner_link.html",
+			"page/integration.html",
+			"page/lunbo.html"
+		],
+		"refer": [
+			"help_list.html",
+			"page/safety.html",
+			"page/help_list.html",
+			"page/about_us.html",
+			"page/custom.html",
+			"page/notice_list.html",
+			"page/sign_polite.html",
+			"page/person_infor.html",
+			"page/my_news.html",
+			"page/know_us.html",
+			"page/my_invest.html",
+			"page/change_buspwd.html",
+			"page/change_logpwd.html",
+			"page/find_logpwd1.html",
+			"page/recharge.html",
+			"page/hist_recharge.html",
+			"page/pay_back.html",
+			"page/hist_cash.html",
+			"page/cash.html",
+			"page/tender_detail.html",
+			"page/debt_list.html",
+			"page/hist_invest.html",
+			"page/invest_now.html",
+			"page/login.html",
+			"page/user_reg1.html",
+			"users.html",
+			"page/user_reg2.html",
+			"page/tengder_zd.html",
+			"page/load_zc.html",
+			"page/certification.html",
+			"page/set_buspwd.html",
+			"page/hist_busin.html",
+			"page/change_phone1.html",
+			"page/notice_detail.html",
+			"page/coupon_look.html",
+			"page/coupon_over.html",
+			"page/help_detail.html",
+			"page/bind_mail.html",
+			"page/find_logpwd2.html",
+			"page/find_buspwd1.html",
+			"page/find_buspwd2.html",
+			"page/tz_detail.html",
+			"page/invite.html",
+			"page/zxkf.html",
+			"page/zc_protocol.html",
+			"page/tender_intro.html",
+			"page/fxjss.html",
+			"page/banner_link.html",
+			"page/new.html",
+			"page/activity.html",
+			"page/tx_result.html",
+			"page/tz_success.html",
+			"page/adress.html",
+			"page/integration.html",
+			"page/active3.html",
+			"tender.html",
+			"page/lunbo.html",
+			"page/limit.html",
+			"page/unbundling.html"
+		]
+	},
+	"page/safety.html": {
+		"resources": [
+			"images/safety_04c.png",
+			"css/style1.css",
+			"images/safety_02c.png",
+			"js/jquery-2.1.1.min.js",
+			"images/safety_03c.png",
+			"images/safety_03a.png",
+			"images/safety_02b.png",
+			"js/jquery.touchSwipe.min.js",
+			"images/safety_04a.png",
+			"images/safety_01a.png",
+			"images/safety_02a.png",
+			"images/ladown.png",
+			"images/safety_01b.png",
+			"images/safety_01c.png",
+			"images/safety_04b.png",
+			"images/safety_03b.png",
+			"css/jgjf.css",
+			"css/fonts.css",
+			"css/ymkj.css",
+			"css/css.css",
+			"css/mui.min.css",
+			"js/jquery.min.js",
+			"js/common.js",
+			"js/mui.min.js"
+		],
+		"refer": []
+	},
+	"page/about_us.html": {
+		"resources": [
+			"images/ymkj/about_us.png",
+			"images/ymkj/about_we.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/down.js"
+		],
+		"refer": []
+	},
+	"page/custom.html": {
+		"resources": [
+			"images/ymkj/kfzaixian.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"css/fonts.css",
+			"images/ymkj/kfphone.png",
+			"js/jquery.min.js",
+			"css/ymkj.css",
+			"img/right_jtbg.png",
+			"css/mui.min.css",
+			"js/common.js",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/help_list.html": {
+		"resources": [
+			"images/ymkj/helpico04.png",
+			"images/ymkj/helpico01.png",
+			"images/ymkj/helpico06.png",
+			"images/ymkj/help_ico.png",
+			"images/ymkj/helpico03.png",
+			"images/ymkj/helpico02.png",
+			"images/ymkj/helpico05.png",
+			"img/right_jtbg.png",
+			"css/jgjf.css",
+			"js/jquery.min.js",
+			"css/ymkj.css",
+			"css/css.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/help.js",
+			"js/vue.js",
+			"js/pagejs/down.js",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/notice_list.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"css/fonts.css",
+			"js/jquery.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/mui.min.js",
+			"js/common.js",
+			"js/vue.js",
+			"js/pagejs/notice.js",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/sign_polite.html": {
+		"resources": [
+			"js/calendar_rl.js",
+			"css/calendar.css",
+			"images/ymkj/qdylbg.png"
+		],
+		"refer": []
+	},
+	"page/person_infor.html": {
+		"resources": [
+			"images/ymkj/per_head1.png",
+			"img/right_jtbg.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"css/fonts.css",
+			"js/jquery.min.js",
+			"css/mui.min.css",
+			"js/jquery.touchSwipe.min.js",
+			"css/ymkj.css",
+			"js/mui.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"js/pagejs/about_page.js",
+			"js/vue.js",
+			"js/pagejs/down.js",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub_local.html",
+			"index_local.html"
+		]
+	},
+	"page/my_news.html": {
+		"resources": [
+			"images/ymkj/newsbg03.png",
+			"images/ymkj/newsbg02.png",
+			"images/ymkj/newsbg04.png",
+			"images/ymkj/newsbg01.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/notice.js",
+			"js/vue.js",
+			"css/fonts.css",
+			"images/nothig/xx_not.png",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/know_us.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/ymkj/loginbg.png",
+			"css/ymkj.css",
+			"img/right_jtbg.png",
+			"js/common.js",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/my_invest.html": {
+		"resources": [
+			"js/select.js",
+			"js/jquery.min.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/pagejs/notice.js",
+			"js/common.js",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/invest.js",
+			"images/nothig/tz_not.png"
+		],
+		"refer": [
+			"sub_local.html",
+			"index_xm.html"
+		]
+	},
+	"page/recharge.html": {
+		"resources": [
+			"images/ymkj/v.png",
+			"images/ymkj/yh/jianshe.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/recharge.js",
+			"images/nothig/smrz_not.png",
+			"images/nothig/xx_not.png",
+			"js/vue.js",
+			"images/bfbg.png",
+			"images/fybg.png",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html",
+			"sub.html"
+		]
+	},
+	"page/pay_back.html": {
+		"resources": [
+			"js/calendar_rl.js",
+			"css/calendar.css"
+		],
+		"refer": []
+	},
+	"page/cash.html": {
+		"refer": [
+			"sub_local.html"
+		],
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"images/ymkj/yh/jianshe.png",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/cash.js",
+			"js/vue.js",
+			"images/nothig/smrz_not.png",
+			"images/nothig/xx_not.png",
+			"js/pagejs/down.js",
+			"img/loading2.gif",
+			"images/ymkj/calcbg.png"
+		]
+	},
+	"page/tender_detail.html": {
+		"resources": [
+			"images/ymkj/xm_congttopbg.png",
+			"images/ymkj/calc2.png",
+			"images/ymkj/jt.png",
+			"images/ymkj/calcbg.png",
+			"js/jquery.min.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/tender_detail.js",
+			"js/vue.js",
+			"js/pagejs/down.js",
+			"img/loading2.gif"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/hist_invest.html": {
+		"resources": [
+			"images/ymkj/phoneload.png",
+			"js/pagejs/hist_invest.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/down.js"
+		],
+		"refer": []
+	},
+	"page/invest_now.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"images/ymkj/jt.png",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"fonts/mui.ttf",
+			"images/ymkj/hb_selected.png",
+			"images/ymkj/jxqbg.png",
+			"js/jquery.js",
+			"images/ymkj/hbbg.png",
+			"js/pagejs/invest_now.js",
+			"js/vue.js",
+			"img/loading2.gif",
+			"js/pagejs/down.js",
+			"images/ymkj/success_01.png",
+			"images/ymkj/success_02.png",
+			"js/pagejs/tz_success.js",
+			"js/pagejs/share.js"
+		],
+		"refer": [
+			"sub_local.html",
+			"index_xm.html"
+		]
+	},
+	"page/login.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"images/ymkj/loginbg.png",
+			"js/jquery.min.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/common.js",
+			"img/checkyes.png",
+			"index.html",
+			"index_local.html",
+			"js/pagejs/login.js",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html",
+			"index.html",
+			"index_local.html"
+		]
+	},
+	"page/user_reg1.html": {
+		"resources": [
+			"img/checkyes.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/user_reg.js",
+			"fonts/mui.ttf",
+			"js/pagejs/user_reg1.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"index_local.html": {
+		"resources": [
+			"about_page.html",
+			"fonts/vg/ymkjvg109.svg",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/vg/ymkjvg104.svg",
+			"fonts/vg/ymkjvg105.svg",
+			"css/style.css",
+			"fonts/vg/ymkjvgnav01b.svg",
+			"js/index.js",
+			"js/jquery.js",
+			"css/ymkj.css",
+			"users.html",
+			"fonts/vg/ymkjvgnav04b.svg",
+			"fonts/vg/ymkjvg103.svg",
+			"fonts/vg/ymkjvgnav03b.svg",
+			"fonts/vg/ymkjvgnav02b.svg",
+			"images/ymkj/kf_bnt.png",
+			"images/ymkj/return_bnt.png"
+		],
+		"refer": [
+			"about_page.html",
+			"users.html",
+			"main.html",
+			"tender.html",
+			"sub_local.html"
+		]
+	},
+	"page/user_reg2.html": {
+		"resources": [
+			"js/pagejs/user_reg2.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/tengder_zd.html": {
+		"resources": [
+			"plugin/picker/css/mui.picker.css",
+			"images/ymkj/zdtbgz.png",
+			"img/checkyes.png",
+			"plugin/picker/js/mui.picker.js",
+			"plugin/picker/js/mui.dtpicker.js",
+			"plugin/picker/js/mui.poppicker.js",
+			"plugin/picker/css/mui.poppicker.css"
+		],
+		"refer": []
+	},
+	"page/load_zc.html": {
+		"resources": [
+			"images/ymkj/loginbg.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/certification.html": {
+		"resources": [
+			"js/pagejs/certification.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"img/calcbg.png",
+			"img/jdt.png"
+		],
+		"refer": [
+			"sub_local.html",
+			"index_local.html"
+		]
+	},
+	"page/set_buspwd.html": {
+		"resources": [
+			"js/pagejs/set_buspwd.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"img/jdt.png",
+			"img/calcbg.png"
+		],
+		"refer": [
+			"sub_local.html",
+			"index_local.html",
+			"index_xm.html"
+		]
+	},
+	"index_xm.html": {
+		"resources": [
+			"tender.html",
+			"css/style.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"js/index.js",
+			"js/jquery.js",
+			"css/ymkj.css",
+			"fonts/vg/ymkjvg109.svg",
+			"fonts/vg/ymkjvg103.svg",
+			"fonts/vg/ymkjvg105.svg",
+			"fonts/vg/ymkjvgnav02b.svg",
+			"fonts/vg/ymkjvgnav04b.svg",
+			"fonts/vg/ymkjvgnav03b.svg"
+		],
+		"refer": [
+			"tender.html",
+			"about_page.html",
+			"users.html",
+			"main.html"
+		]
+	},
+	"page/change_buspwd.html": {
+		"resources": [
+			"js/pagejs/change_buspwd.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": [
+			"index_local.html"
+		]
+	},
+	"page/hist_busin.html": {
+		"resources": [
+			"js/select.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/cash.js",
+			"js/pagejs/hist_busin.js",
+			"images/nothig/tz_not.png",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/hist_recharge.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": []
+	},
+	"page/hist_cash.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/hist_cash.js",
+			"js/vue.js",
+			"js/pagejs/down.js"
+		],
+		"refer": []
+	},
+	"page/notice_detail.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/pagejs/notice.js",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": []
+	},
+	"page/coupon_look.html": {
+		"resources": [
+			"images/ymkj/hb_selected.png",
+			"images/ymkj/dhhbbg.png",
+			"js/select.js",
+			"images/ymkj/hbbg.png",
+			"images/ymkj/jxqbg.png",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/cash.js",
+			"js/vue.js",
+			"js/pagejs/coupon.js",
+			"images/nothig/jxq_not.png",
+			"images/nothig/xjq_not.png",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/coupon_over.html": {
+		"resources": [
+			"images/ymkj/jxqbg_notuse.png",
+			"images/ymkj/notuse01.png",
+			"images/ymkj/hbbg_notuse.png",
+			"images/ymkj/notuse02.png",
+			"images/ymkj/dhhbbg.png",
+			"js/jquery.min.js",
+			"js/select.js",
+			"css/jgjf.css",
+			"css/ymkj.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/coupon.js",
+			"images/nothig/xjq_not.png",
+			"images/nothig/jxq_not.png",
+			"js/pagejs/down.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/help_detail.html": {
+		"resources": [
+			"images/ymkj/help_list_a.png",
+			"images/ymkj/a_center.png",
+			"images/ymkj/q_center.png",
+			"images/ymkj/help_list_b.png",
+			"css/jgjf.css",
+			"js/jquery.min.js",
+			"js/pagejs/help.js",
+			"css/ymkj.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"page/find_logpwd1.html": {
+		"resources": [
+			"js/pagejs/find_logpwd.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/change_logpwd.html": {
+		"resources": [
+			"js/pagejs/change_buspwd.js"
+		],
+		"refer": []
+	},
+	"page/find_logpwd2.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/find_logpwd.js",
+			"css/ymkj.css"
+		],
+		"refer": [
+			"index_local.html"
+		]
+	},
+	"page/find_buspwd1.html": {
+		"refer": [
+			"sub_local.html"
+		],
+		"resources": []
+	},
+	"page/find_buspwd2.html": {
+		"refer": [
+			"index_local.html"
+		],
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/find_logpwd.js",
+			"css/ymkj.css"
+		]
+	},
+	"page/tz_detail.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css",
+			"js/pagejs/invest_now.js",
+			"js/pagejs/invest.js"
+		],
+		"refer": []
+	},
+	"page/invite.html": {
+		"resources": [
+			"images/ymkj/share04.png",
+			"images/ymkj/share01.png",
+			"images/ymkj/share02.png",
+			"js/pagejs/inv.js",
+			"images/ymkj/inv02.png",
+			"images/ymkj/share03.png",
+			"images/ymkj/inv01.png",
+			"images/ymkj/inv03.png",
+			"js/jquery.min.js",
+			"css/jgjf.css",
+			"css/ymkj.css",
+			"css/css.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/clipboard.js",
+			"js/clipboard.min.js",
+			"js/pagejs/down.js",
+			"css/new.css",
+			"js/jquery.js",
+			"images/invite03.png",
+			"images/invite02.png",
+			"images/invitebnt.png",
+			"images/invite01.png",
+			"js/vue.js",
+			"js/pagejs/invite.js",
+			"fonts/mui.ttf",
+			"img/loading2.gif",
+			"js/pagejs/share.js"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/zxkf.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": []
+	},
+	"page/zc_protocol.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/ymkj.css"
+		],
+		"refer": []
+	},
+	"index_index.html": {
+		"resources": [
+			"main.html",
+			"fonts/vg/ymkjvg103.svg",
+			"fonts/vg/ymkjvgnav02b.svg",
+			"fonts/vg/ymkjvgnav04b.svg",
+			"fonts/vg/ymkjvgnav03b.svg",
+			"fonts/vg/ymkjvg109.svg",
+			"fonts/vg/ymkjvg104.svg",
+			"fonts/vg/ymkjvg105.svg",
+			"images/ymkj/upgxbg02.png",
+			"fonts/vg/ymkjvgnav01b.svg",
+			"js/index.js",
+			"js/mui.min.js",
+			"js/common.js",
+			"css/style.css",
+			"js/pagejs/update.js",
+			"js/jquery.js",
+			"css/ymkj.css",
+			"tender.html"
+		],
+		"refer": [
+			"main.html",
+			"tender.html",
+			"about_page.html",
+			"users.html",
+			"sub_local.html"
+		]
+	},
+	"page/tender_intro.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/jquery.min.js",
+			"js/pagejs/tender_detail.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"css/ymkj.css",
+			"images/ymkj/jt.png"
+		],
+		"refer": []
+	},
+	"page/fxjss.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"css/ymkj.css"
+		],
+		"refer": []
+	},
+	"page/banner_link.html": {
+		"resources": [
+			"js/pagejs/banner.js",
+			"js/jquery.min.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"img/loading2.gif",
+			"css/ymkj.css",
+			"error.html"
+		],
+		"refer": [
+			"sub_local.html",
+			"error.html"
+		]
+	},
+	"page/new.html": {
+		"resources": [
+			"js/pagejs/new.js",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"images/new04.png",
+			"css/new.css",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"js/jquery.js",
+			"css/ymkj.css",
+			"images/new01.png",
+			"images/newbnt.png",
+			"images/new_biao.png",
+			"images/new_song.png"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/activity.html": {
+		"resources": [
+			"css/new.css",
+			"css/jgjf.css",
+			"css/css.css",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/jquery.js",
+			"css/ymkj.css",
+			"js/common.js",
+			"js/pagejs/invite.js",
+			"js/pagejs/down.js",
+			"js/pagejs/activity.js",
+			"images/banner01.png",
+			"images/banner02.png",
+			"images/ymkj/jt.png"
+		],
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/tx_result.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/pagejs/cash.js",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"img/loading2.gif",
+			"images/ymkj/tx_result1.png",
+			"css/ymkj.css",
+			"js/pagejs/tx_result.js"
+		],
+		"refer": []
+	},
+	"page/tz_success.html": {
+		"resources": [
+			"js/pagejs/invest.js",
+			"images/ymkj/success_01.png",
+			"images/ymkj/success_02.png",
+			"css/jgjf.css",
+			"js/jquery.min.js",
+			"js/pagejs/down.js",
+			"css/ymkj.css",
+			"css/css.css",
+			"js/common.js",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/loading2.gif",
+			"js/pagejs/tz_success.js",
+			"js/pagejs/share.js"
+		],
+		"refer": [
+			"index_xm.html"
+		]
+	},
+	"page/adress.html": {
+		"resources": [
+			"css/jgjf.css",
+			"css/css.css",
+			"js/common.js",
+			"js/jquery.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/pagejs/down.js",
+			"css/ymkj.css",
+			"js/pagejs/adress.js",
+			"js/vue.js"
+		],
+		"refer": []
+	},
+	"page/integration.html": {
+		"refer": [
+			"sub_local.html"
+		]
+	},
+	"page/lunbo.html": {
+		"refer": [
+			"sub_local.html"
+		]
+	}
+}

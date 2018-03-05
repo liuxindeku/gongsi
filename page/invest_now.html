@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>立即投资</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/index1.css" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		<!-- 侧滑导航根容器 -->
+
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<!-- 菜单容器 -->
+
+				<div class="mui-off-canvas-left" id="offCanvasSide">
+					<div class="mui-scroll-wrapper" style="background-color: #f6f6f6;">
+						<div class="mui-scroll">
+							<!-- 菜单具体展示内容 -->
+							<!--选择加息券-->
+							<div class="scroll_left noinp">
+								<ul class="top_nav wid50 xjjx_nav">
+									<li class="top_select">加息券</li>
+									<li>红包</li>
+								</ul>
+								<div class="li_se">
+									<div class="xmbox">
+										<h1>提醒：单笔投资只能使用1张加息券</h1>
+										<ul id="yhq_jxq">
+											<li v-for="list in lists" v-cloak v-bind:hid="list.id" v-bind:mind="list.min" v-bind:maxd="list.max" v-bind:dayd="list.min_day">
+												<div class="xmhb_head">
+													<img src="../images/ymkj/jxqbg.png" />
+													<h6>{{list.interest}}<span>%</span></h6>
+												</div>
+												<div class="xmhb_cont">
+													<h4>满{{list.min}}元<span v-if="list.max">-{{list.max}}元</span></h4>
+													<h4>投资期限{{list.min_day}}天及以上</h4>
+													<h5>有效期至 {{list.exptime}}</h5>
+												</div>
+												<img src="../images/ymkj/hb_selected.png" class="hbselect" />
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="li_se" style="display: none;">
+									<div class="xmbox">
+										<h1>提醒：单笔投资只能使用1个红包</h1>
+										<ul id="yhq_hb">
+											<li v-for="list in lists" v-cloak v-bind:hid="list.id" v-bind:mind="list.min" v-bind:maxd="list.max" v-bind:dayd="list.min_day">
+												<div class="xmhb_head">
+													<img src="../images/ymkj/hbbg.png" />
+													<h2 style="color: #fff;line-height: 50px;">{{list.money}}
+														<span style="font-size: 12px;">元</span>
+													</h2>
+													<!--<h3>红包</h3>-->
+												</div>
+												<div class="xmhb_cont">
+													<h4>投资金额≥{{list.min}}元</h4>
+													<h4>投资期限≥{{list.min_day}}天</h4>
+													<h5>有效期至  {{list.exptime}}</h5>
+												</div>
+												<img src="../images/ymkj/hb_selected.png" class="hbselect" />
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 主页面标题 -->
+				<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<!--是否投资-->
+						<div class="investcon">
+							<div class="xmcontbox" id="content" v-cloak>
+								<div class="xmc_head2 noinp">
+									<input type="hidden" v-model="nid" id="borrow_nid" />
+									<input type="hidden" id="bdje" v-model="account" />
+									<input type="hidden" id="timed" v-model="period" />
+									<input type="hidden" id="coupon_users_id" />
+									<h1>{{name}}{{nid}}</h1>
+									<h2>剩余可投：<span class="sykt">{{wait}}</span>元</h2>
+								</div>
+								<div class="cont_pad">
+									<ul class="xmcont">
+										<li class="xmpr">
+											<h5>您的可用金额：</h5>
+											<h6 class="kyye">{{balance}}</h6>
+											<p class="ljcz">充值</p>
+										</li>
+										<li class="bod0 xmpr tzcz">
+											<h5>投资金额</h5>
+											<input type="number" class="tzje" id="tzje" placeholder="100元起投" />
+											<p class="ye_bnt">余额全投</p>
+											<div class="yujishouyi">预计收益<span class="yujishouyi_yuan">0.00</span>元
+												<input type="text" class="cal_qx" v-model="period" />
+												 <input type="hidden" name="lilvlilv" class="lilvlilv" v-model="apr" />
+												 <input type="hidden" name="touzitype" class="touzitype" v-model="type" />
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="cont_pad">
+									<ul class="xmcont yhj_bnt">
+										<li class="noinp">
+											<a href="#offCanvasSide">
+												<h1>使用加息券</h1>
+												<div v-if="coupon=='0'">
+													<h3>目前暂无加息券</h3>
+												</div>
+												<div class="cr" v-else>
+													<h4></h4>
+													<h3>{{coupon}}个</h3>
+												</div>
+											</a>
+										</li>
+										<li class="bod0 noinp">
+											<a href="#offCanvasSide">
+												<h1>使用红包</h1>
+												<div v-if="red=='0'">
+													<h3>目前暂无红包</h3>
+												</div>
+												<div class="cr" v-else>
+													<h4></h4>
+													<h3>{{red}}个</h3>
+												</div>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+								<button type="button" class="cz_true  noinp mui-btn-danger invest_bnt cz_bnt">确认投资</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+				<div id="tz_success" style="display: none;">
+					<img src="../images/ymkj/success_01.png" class="suc_a" />
+					<h1>恭喜您，投资成功~</h1>
+					<h2>您已成功投资<span>【{{name}}&nbsp;{{tender_id}}】</span>，年化收益{{apr}}%，投资期限{{period}}。</h2>
+					<h2>您的投资金额为{{money}}元，<span v-if="coupon_name">已使用{{coupon_name}}</span>，预计收益为<span>{{interest}}<i v-if="coupon_award">+{{coupon_award}}</i></span>元。</h2>
+					<button type="button" class="jg_bnt mui-btn-red cz_bnt och_index_xm">继续去投资</button>
+					<a class="shareHref">
+						<div class="suc_share"><img src="../images/ymkj/success_02.png" class="suc_b" />
+							<h3>分享给好友拿奖励</h3></div>
+					</a>
+					<div class="share_rule">
+						<p><span>分享有赏：</span>新用户通过该链接注册并投资，分享者即可获得100积分和收益分红。</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--<script src="../js/pagejs/down.js"></script>-->
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/invest_now.js"></script>
+		<script src="../js/pagejs/tz_success.js"></script>
+		<script src="../js/pagejs/share.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				invest_now();
+				mui("body").on("tap", ".noinp", function() {
+					$("input").blur();
+				})
+			})
+
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			});
+		</script>
+	</body>
+
+</html>

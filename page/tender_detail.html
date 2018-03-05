@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>项目详情</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+			<style type="text/css">
+								#tubiao{
+									position: absolute;
+									top: 330px;
+									right: 40px;
+									width: 90px;
+									height: 80px;
+								}
+								#tubiao img{
+									width: 100%;
+								}
+							</style>
+	</head>
+
+	<body> 
+		<!--项目详情-->
+		<div id="loading"><img src="../img/loading2.gif"/></div>
+		<div class="investcon" id="content" v-cloak>
+			
+			<div class="zt_butn cofebg">
+				
+				<!--<div class="calcbnt" v-if="status=='1'&&wait!='0.00'"><img src="../images/ymkj/calc2.png" /></div>-->
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-if="status=='32'">{{status_name}}</button>
+
+				<div v-else-if="status=='1'">
+					<!--<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-if="wait=='0.00'">还款中</button> 
+			<div v-else>-->
+					<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-if="wait=='0.00'">{{status_name}}</button>
+					
+						<button type="button" class="mui-btn cofebg xmtzbnt sylist_left_djs" id="confirmBtn" v-bind:rag="begin_time" v-if="begin_time" v-bind:hrd="nid"></button>
+						<button type="button" class="mui-btn cofebg xmtzbnt  gobnt "  v-bind:hrd="nid" v-else>立即投资</button>
+				
+					<!--</div>-->
+
+				</div>
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-else-if="status=='31'">{{status_name}}</button>
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-else-if="status=='11'">{{status_name}}</button>
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-else-if="status=='0'">{{status_name}}</button>
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-else-if="status=='6'">{{status_name}}</button>
+				<button type="button" class="mui-btn  xmtzbnt" disabled="disabled" v-else-if="status=='2'">{{status_name}}</button>
+			</div>
+			<div id="pullrefresh">
+				<div class="mui-scroll">
+					<div class="xmcontbox">
+						<div class="xmc_head">
+							<h1>{{apr_base}}<span>%</span><span v-if="apr_extra>0">+{{apr_extra}}%</span></h1>
+							<h2>预期年化利率</h2>
+							<p class="qx">期限{{period}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{min}}元起投</p>
+							<div class="xm_blbox">
+								<p><span>{{scale}}</span>%已售</p>
+								<div class="xm_bl"></div>
+							</div>
+							<div class="xmye">
+								<h3>剩余可投<span>{{wait}}</span>元</h3>
+								<h4>项目总额<span>{{account}}</span>元</h4>
+							</div>
+						</div>
+						<div class="zcs">注册即送888元投资红包</div>
+						<ul class="xmcont">
+						
+							<div id="tubiao">
+								
+						    </div>
+							<li>
+								<h1>项目名称</h1>
+								<h2>{{name}}{{nid}}</h2>
+							</li>
+							<li>
+								<h1>还款方式</h1>
+								<h2>{{style_title}}</h2>
+							</li>
+							<li>
+								<h1>计息方式</h1>
+								<h2>满标复审计息</h2>
+							</li>
+							<li class="och_tender_intro"  v-bind:rag="xmid">
+								<h1>项目介绍</h1>
+								<h2>项目详情</h2> 
+							</li>
+							<li class="bod0 och_fxjss"  v-bind:rag="xmid">
+								<h1>安全保障</h1>
+								<h2>《风险揭示书》</h2> 
+							</li>
+						</ul>
+						<ul class="xmcont" style="padding-bottom: 60px;">
+							<!--<li onclick="och('page/debt_list.html','债权列表',1)">
+				<h1>债权列表</h1>
+				<div class="cr">
+					<h4></h4>
+					<h3>共有6个债权</h3>
+				</div>
+			</li>--> 
+							<li class="bod0" v-if="tender_people==0">
+								<h1>投资记录</h1>
+								<div class="cr">
+									<h4></h4>
+									<h3>已投资{{tender_people}}人</h3>
+								</div>
+							</li>
+							<li class="bod0 och_hist_invest" v-else>
+								<h1>投资记录</h1>
+								<div class="cr">
+									<h4></h4>
+									<h3>已投资{{tender_count}}笔</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="calc_box">
+				<div class="calcbg calc_c"></div>
+				<!--calc的rat为此标的利率 ，bi为此标的属性，y是月标，t是天标-->
+				<div class="calc" bi="t">
+					<input type="hidden" id="zlilv" v-model="apr"/>
+					<h1>收益计算</h1>
+					<div class="cal">
+						<input type="number" class="cal_je" placeholder="请输入投资金额(元)" oninput='this.value=this.value.replace(/^[0]+[0-9]*$/gi,"")'/>
+						<input type="text" class="cal_qx" v-model="period" />
+					</div>
+					<h2><span>0.00</span>元</h2>
+					<h3>预期收益</h3>
+					<ul>
+						<li class="cal_close calc_c">关闭</li>
+						<li class="cal_js calc_j">计算</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/pagejs/tender_detail.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				tender_detail();
+			})
+		</script>
+	</body>
+
+</html>

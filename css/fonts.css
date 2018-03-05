@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'lzd2';
+	src: url('../fonts/login.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal; 
+}
+
+[class^="icon-"], [class*="icon-"] {
+	font-family: 'lzd2';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE600:before {
+	content: "\e1000";
+}
+.icon-uniE601:before {
+	content: "\e1001"; 
+}
+.icon-uniE602:before {
+	content: "\e1002";
+}
+.icon-uniE603:before {
+	content: "\e1003";
+}
+.icon-uniE604:before {
+	content: "\e1004";
+}
+.icon-uniE605:before {
+	content: "\e1005";
+}
+.icon-uniE606:before {
+	content: "\e1006";
+}
+.icon-uniE607:before {
+	content: "\e1007";
+}
+.icon-uniE608:before {
+	content: "\e1008";
+}
+
+@font-face {
+    font-family: 'lzd-app';
+    src:url('../fonts/lzd-app.ttf?bzylbw') format('truetype');
+}
+
+[class^="lzd-"], [class*="lzd-"] {
+    font-family: 'lzd-app';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.lzd-wypz:before {
+    content: "\e616";
+}
+.lzd-vip:before {
+    content: "\e613";
+}
+.lzd-hkjl:before {
+    content: "\e612";
+}
+.lzd-smrz:before {
+    content: "\e611";
+}
+.lzd-list:before {
+    content: "\e610";
+}
+.lzd-myacount:before {
+    content: "\e60f";
+}
+.lzd-more:before {
+    content: "\e60e";
+}
+.lzd-tztj:before {
+    content: "\e602";
+}
+.lzd-wdtz:before {
+    content: "\e603";
+}
+.lzd-wdzd:before {
+    content: "\e604";
+}
+.lzd-xgmm:before {
+    content: "\e605";
+}
+.lzd-yhksz:before {
+    content: "\e606";
+}
+.lzd-zhgk:before {
+    content: "\e607";
+}
+.lzd-zjjl:before {
+    content: "\e608";
+}
+.lzd-zdtbsz:before {
+    content: "\e609";
+}
+.lzd-txsq:before {
+    content: "\e60a";
+}
+.lzd-txjl:before {
+    content: "\e60b";
+}
+.lzd-syxq:before {
+    content: "\e60c";
+}
+.lzd-zjhklb:before {
+    content: "\e60d";
+}
+.lzd-czjl:before {
+    content: "\e600";
+}
+.lzd-zxcz:before {
+    content: "\e601";
+}
+.lzd-mail:before {
+    content: "\e614";
+}
+.lzd-device-phone:before {
+    content: "\e615";
+}
+.lzd-sy:before {
+    content: "\e900";
+}

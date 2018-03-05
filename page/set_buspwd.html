@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>修改密码</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<style type="text/css">
+			.yzm {
+				display: block;
+				width: 50px;
+				height: 20px;
+				position: absolute;
+				right: 15px;
+				top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--修改密码-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="cgzh">
+					<li>
+						<h1>交易密码</h1>
+						<input type="password" placeholder="请输入交易密码" id="pwd" />
+					</li>
+					<li>
+						<h1>确认交易密码</h1>
+						<input type="password" id="cpwd" placeholder="请确认交易密码" />
+					</li>
+					<li style="position: relative;">
+						<h1>验证码</h1>
+						<input type="password" id="code" placeholder="请输入图形验证码" />
+						<img class="yzm">
+					</li>
+				</ul>
+				<button class="cz_true mui-btn-red">确认</button>
+				
+			</div>
+		</div>
+		<div class="winbox cgzh_go">
+					<div class="winbg"></div>
+					<div class="win_cont">
+						<h1>交易密码设置成功</h1>
+						<h2>恭喜您！<br />您的交易密码已完成设置！</h2>
+						<div class="ktnow och_index_xm">去投资</div>
+						<div class="ktno och_ibdex_local">返回账户</div>
+					</div>
+				</div>
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/set_buspwd.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				set_buspwd()
+			})
+		</script>
+	</body>
+
+</html>

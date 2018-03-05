@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>重置密码</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+
+	<body>
+		<!--忘记密码-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="wjmm">
+					<div class="mui-input-group">
+						<div class="mui-input-row">
+							<input type="text" id="phone" placeholder="请输入手机号码">
+						</div>
+						<div id="tpyzm" style="width: 100%;">
+							<input type="text" class="pic" name="pic" maxlength="4" placeholder="请输入图片验证码" style="width: 70%;padding-left: 15px;"/>
+							<img class="yzm" src="/imgcode" id="valicode2" alt="点击刷新" style="width: 20%; padding-top: 10px;">
+						</div>
+						<div class="mui-input-row" style="border-top: 1px solid #F0F0F0;">
+							<input type="text" class="code" placeholder="请输入手机验证码">
+							<button type="button" id="code" class="yzm_true">获取验证码</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="cz_true find_logpwd_next mui-btn-red">下一步</button>
+			</div>
+		</div>
+
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/pagejs/find_logpwd.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				pho();
+				mui.post(weburl + 'imgcode', {}, function(data) {
+					$('.yzm').attr('src', weburl + '/imgcode');
+					$('.yzm').click(function(){
+	$(this).attr('src', weburl+'/imgcode?'+Math.random());
+	})
+
+
+				})
+			})
+		</script>
+	</body>
+
+</html>

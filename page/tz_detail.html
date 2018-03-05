@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>我的投资</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<!--我的投资_详情-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div id="detail" v-cloak>
+					<div class="my_tzbox">
+						<h1>{{name}}&nbsp;&nbsp;{{nid}}</h1>
+						<div class="my_tz">
+							<h2>投资金额：</h2>
+							<h3><span>{{account}}</span>元</h3>
+							<!--<h4>已还款</h4>-->
+						</div>
+					</div>
+					<ul class="user_li mb5">
+						<li>
+							<h2>到期收益</h2>
+							<h5>{{interst}}元</h5>
+						</li>
+						<li>
+							<h2>年化利率</h2>
+							<h4>{{apr_base}}%<span v-if="apr_extra">+{{apr_extra}}%</span></h4>
+						</li>
+						<li v-if="coupon_name">
+							<h2>{{coupon_name}}</h2>
+							<h4><span v-if="interest">{{interest}}%</span><span v-else>{{money}}元</span></h4>
+						</li>
+						<li>
+							<h2>投资时间</h2>
+							<h4>{{tender_time}}</h4>
+						</li>
+						<li>
+							<h2>到期时间</h2>
+							<h4>{{end_time}}</h4>
+						</li>
+						<li class="bod0">
+							<h2>还款方式</h2>
+							<h4>{{style}}</h4>
+						</li>
+					</ul>
+					<ul class="user_li mb0">
+						<li>
+							<h2>回款计划</h2>
+							<h6>该项目共有{{leng}}期回款</h6>
+						</li>
+					</ul>
+					<div class="my_tz_cont" style="margin-bottom: 10px;">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr class="cont_head">
+								<td>回款时间</td>
+								<td>应还本金</td>
+								<td>应还利息</td>
+								<td class="text_r">状态</td>
+							</tr>
+							<tr v-for="list in lists">
+								<td>{{list.repay_time}}</td>
+								<td>{{list.account}}</td>
+								<td>{{list.interest}}</td>
+								<td class="text_r">{{list.status}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/pagejs/down.js"></script>
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/invest.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				tz_detail();
+			})
+		</script>
+		<!---->
+	</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>助力好友</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.container_act3 {
+				height: 100%;
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.container_act3>img {
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+				position: relative;
+			}
+			
+			.container_act3_center {
+				position: absolute;
+				top: 28%;
+				left: 50%;
+				transform: translate(-50%);
+				width: 77%;
+				margin: 0 auto;
+				z-index: 4;
+			}
+			
+			.active3c {
+				width: 100%;
+				height: 1000px;
+				position: absolute;
+				top: 0;
+				z-index: 100;
+				background: url("../images/active3c.png") no-repeat center 10px / 830px 850px;
+			}
+			
+			.head1 {
+				text-align: center;
+				color: #ED413D;
+				font-size: 14px;
+			}
+			
+			.head2 {
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			.head2 a {
+				color: #ED413D;
+				text-decoration: none;
+				display: block;
+				padding: 6px 0;
+			}
+			
+			form .input {
+				width: 100%;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#mobile {
+				width: 100%;
+				height: 40px;
+				border: 0 none;
+				border-radius: 5px;
+				margin: 1% 0;
+				padding-left: 10px;
+				box-sizing: border-box;
+				background-color: #FDE5D9;
+				color: #ED3F3E;
+				font-size: 14px;
+			}
+			
+			#password {
+				width: 100%;
+				height: 40px;
+				border: 0 none;
+				border-radius: 5px;
+				margin: 2% 0;
+				padding-left: 10px;
+				box-sizing: border-box;
+				background-color: #FDE5D9;
+				color: #ED3F3E;
+				font-size: 14px;
+			}
+			
+			form .input span,
+			#btn-getcode {
+				position: absolute;
+				right: 0;
+				top: 12%;
+				z-index: 1;
+				width: 32%;
+				height: 40px;
+				background-color: #EB454D;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				cursor: pointer;
+				font-size: 12px;
+				border-radius: 5px;
+			}
+			
+			.yzm {
+				vertical-align: middle;
+				width: 100%;
+				height: 40px;
+			}
+			
+			.foot {
+				text-align: center;
+				margin: 2%;
+				color: #ED413D;
+				font-weight: 700;
+				letter-spacing: 3px;
+				font-size: 14px;
+			}
+			
+			form [type='submit'] {
+				background-color: #ED413D;
+				width: 71.3%;
+				height: 36px;
+				border-radius: 38px;
+				border: 0 none;
+				color: #fff;
+				font-size: 18px;
+				margin: 2% auto;
+				display: block;
+				cursor: pointer;
+			}
+			
+			b {
+				font-size: 12px;
+				margin-left: 10px;
+				color: red;
+				display: none;
+			}
+			
+			form .pic {
+				width: 65%;
+				height: 40px;
+				border: 0 none;
+				border-radius: 5px;
+				margin: 2% 0;
+				padding-left: 10px;
+				box-sizing: border-box;
+				background-color: #FDE5D9;
+				color: #ED3F3E;
+				font-size: 14px;
+			}
+			
+			#ajax_phone_code {
+				width: 65%;
+				height: 40px;
+				border: 0 none;
+				border-radius: 5px;
+				margin: 2% 0;
+				padding-left: 10px;
+				box-sizing: border-box;
+				background-color: #FDE5D9;
+				color: #ED3F3E;
+				font-size: 14px;
+			}
+		</style>
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div class="banlik_box" style="background: #ffe7e4;display: none;">
+					<div class="container_act3 banlik_box">
+						<img src="../images/active3.png" alt="">
+						<div class="active3c">
+							<div class="container_act3_center">
+								<div class="head1">您的好友，正在参加活动</div>
+								<div class="head2">
+									<a href="#">点击进入活动 >></a>
+								</div>
+								<form id="form_act3" action="/?user&q=reg&p=assist" method="post">
+									<input type="hidden" name="chkphone" id="chkphone" value="{$magic.session.chkphone}">
+									<input type="hidden" name="assist" value="1">
+									<input type="hidden" name="type" value="ajax">
+									<input type="hidden" name="uid" value="10">
+
+									<div class="input"><input id="mobile" type="text" name="phone" maxlength="11" placeholder="请输入手机号" /></div>
+									<div class="input"><input id="password" type="password" maxlength="20" name="password" placeholder="请输入密码" /></div>
+									<div class="input"><input type="text" class="pic" name="pic" maxlength="4" placeholder="请输入图片验证码" />
+										<span>
+										<img class="yzm" src="/imgcode" id="valicode2" alt="点击刷新">
+										<!--<img class="yzm" src="/?plugins&amp;q=imgcode" id="valicode2" alt="点击刷新" title="点击可换一张" onclick="this.src='/?plugins&amp;q=imgcode&amp;t='+Math.random();" align="absmiddle"> />-->
+									</span>
+									</div>
+									<div class="input"><input id="ajax_phone_code" type="text" name="ajax_phone_code" maxlength="6" placeholder="请输入手机验证码" /><button class="message" id="btn-getcode">获取验证码</button></div>
+
+									<input class="reg_btn" type="submit" value="帮TA助攻" />
+									<div class="foot">助攻只限新手用户</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				user_id = plus.storage.getItem('user_id');
+
+				$('.yzm').attr('src', weburl + '/imgcode');
+				$('.yzm').on('click', function() {
+					$('.yzm').attr('src', weburl + '/imgcode');
+				})
+
+				//点击验证码倒计时
+				$('.message').on('click', function() {
+					var phone = $("#mobile").val();
+					var valicode = $('input[name="pic"]').val();
+					if(valicode == '') {
+						mui.toast('请输入图片验证码！');
+						return false;
+					}
+					if(phone == '') {
+						mui.toast('请输入手机号码！');
+						return false;
+					}
+
+					var re = /^1\d{10}$/;
+					if(!re.test(phone)) {
+						mui.toast('请输入正确的手机号');
+						return false;
+					}
+
+					$('.message').css({
+						backgroundColor: "#cccccc"
+					}).attr('disabled', true);
+					mui.post(weburl + 'phone/getCode', {
+						phone: phone,
+						valicode: valicode,
+						chkphone: $("#chkphone").val()
+					}, function(result) {
+						if(result == 1) {
+							mui.toast("短信已经发送到你的手机");
+							var num = 60;
+							const int = setInterval(function() {
+								num--;
+								$('.message').html('等待(' + num + ')秒');
+								if(num <= 0) {
+									clearInterval(int);
+									$('.message').html('获取验证码').css({
+										backgroundColor: "#eb454d"
+									}).attr('disabled', false);
+								}
+							}, 1000);
+						} else {
+							$('.message').css({
+								backgroundColor: "#eb454d"
+							}).attr('disabled', false);
+							mui.toast(result);
+							$("#valicode2").trigger("click");
+						}
+					})
+
+				});
+
+				$('#mobile').blur(function() {
+					var mobNum = $('#mobile').val();
+					var re = /^1\d{10}$/;
+					if(!re.test(mobNum)) {
+						mui.toast('请输入正确的手机号');
+					}
+				});
+				$('input[name="pic"]').blur(function() {
+					var picNum = $(this).val();
+					var re = /^[a-zA-Z\d]{4}$/;
+					if(!re.test(picNum)) {
+						mui.toast('请输入正确的验证码');
+					}
+				});
+
+				$('#form_act3').on('submit', function(e) {
+					// 阻止表单默认行为
+					e.preventDefault();
+
+					//判断数据是否为空
+					var msg = '';
+					if($('[name="mobile"]').val() == "") {
+						msg += '手机号码不能为空';
+					}
+					if($('[name="test"]').val() == "") {
+						msg += '手机验证码不能为空';
+					}
+					if($('[name="password"]').val() == "") {
+						msg += '密码不能为空';
+					}
+					if(msg != '') {
+						mui.toast(msg);
+						return false;
+					}
+
+					/*获取当前的表单*/
+					var $form = $(e.target);
+					/*发送登录请求*/
+					mui.ajax({
+						type: 'post',
+						url: weburl+'',
+						data: $form.serialize(),
+						dataType: 'json',
+						success: function(data) {
+							if(true) {
+								/*成功*/
+								// $('[type="submit"]').css({backgroundColor: "#df2e2c"}).attr('disabled', true);
+								mui.toast("恭喜您！助力成功！");
+							} else {
+								/*不成功*/
+								/*指定某一个表单元素的错误提示*/
+								mui.toast("**错误，助力失败！");
+								/*恢复可提交的按钮*/
+								// $('[type="submit"]').css({backgroundColor: "#eb454d"}).attr('disabled', false);
+
+							}
+						}
+					});
+				});
+
+				$("#loading").hide();
+				$(".banlik_box").show();
+			})
+		</script>
+	</body>
+
+</html>

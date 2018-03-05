@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>交易记录</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+
+		<script src="../js/vue.js"></script>
+
+	</head>
+
+	<body>
+		<div>
+			<!--交易记录-->
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<input type="hidden" class="nub" value="0" />
+					<ul class="top_nav wid25">
+						<li class="top_select">全部</li>
+						<li>提现</li>
+						<li>充值</li>
+						<li>其他</li>
+					</ul>
+					<div class="li_se" id="hist_busin_all">
+						<ul>
+							<li class="cztx_hist" v-cloak v-for="list in lists">
+								<div class="cztx_left">
+									<h2>{{list.time}}</h2>
+								</div>
+								<div class="cztx_right">
+									<div class="wof mtk8">
+										<h1>{{list.type}}</h1>
+										<h2 class="jg_color">{{list.money}}元</h2>
+									</div>
+								
+								</div>
+
+							</li>
+						</ul>
+						<div class="nothing noth_a">
+							<img src="../images/nothig/tz_not.png" />
+						</div>
+					</div>
+
+					<!--提现-->
+					<div class="li_se" id="hist_busin_tx">
+						<ul>
+							<li class="cztx_hist" v-cloak v-for="list in lists">
+
+								<div class="cztx_left">
+
+									<h2>{{list.time}}</h2>
+								</div>
+								<div class="cztx_right">
+									<div class="wof mtk8">
+										<h1>{{list.type}}</h1>
+										<h2 class="jg_color">{{list.money}}元</h2>
+									</div>
+									<!--<div class="wof">
+							<h3>尾号4086</h3>
+							<h4>充值成功</h4>
+						</div>	-->
+								</div>
+
+							</li>
+						</ul>
+						<div class="nothing noth_b">
+							<img src="../images/nothig/tz_not.png" />
+						</div>
+					</div>
+					<!--充值-->
+					<div class="li_se" id="hist_busin_cz">
+						<ul>
+							<li class="cztx_hist" v-cloak v-for="list in lists">
+
+								<div class="cztx_left">
+
+									<h2>{{list.time}}</h2>
+								</div>
+								<div class="cztx_right">
+									<div class="wof mtk8">
+										<h1>{{list.type}}</h1>
+										<h2 class="jg_color">{{list.money}}元</h2>
+									</div>
+									<!--<div class="wof">
+							<h3>尾号4086</h3>
+							<h4>充值成功</h4>
+						</div>	-->
+								</div>
+							</li>
+						</ul>
+						<div class="nothing noth_c">
+							<img src="../images/nothig/tz_not.png" />
+						</div>
+					</div>
+					<!--其他-->
+					<div class="li_se" id="hist_busin_qt">
+						<ul>
+							<li class="cztx_hist" v-cloak v-for="list in lists">
+
+								<div class="cztx_left">
+
+									<h2>{{list.time}}</h2>
+								</div>
+								<div class="cztx_right">
+									<div class="wof mtk8">
+										<h1>{{list.type}}</h1>
+										<h2 class="jg_color">{{list.money}}元</h2>
+									</div>
+									<!--<div class="wof">
+							<h3>尾号4086</h3>
+							<h4>充值成功</h4>
+						</div>	-->
+								</div>
+
+							</li>
+						</ul>
+						<div class="nothing noth_d">
+							<img src="../images/nothig/tz_not.png" />
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!--<script src="html5plus://ready"></script>-->
+		<!--<script src="../js/pagejs/down.js"></script>-->
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/hist_busin.js"></script>
+		
+	</body>
+
+</html>

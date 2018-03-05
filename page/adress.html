@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>重置密码</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		
+	</head>
+	<body>
+		<!--忘记密码-->
+		
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+			
+				<input type="hidden" id="aid" value="" />
+				
+			<div id="change_adr"  style="display: none;">
+				<ul class="cgzh">
+					<li>
+						<h1>收货人姓名</h1>
+						<input type="text" id="name" placeholder="请输入您的姓名"/>
+					</li>
+					<li>
+						<h1>收货人电话</h1>
+						<input type="number"  id="phone"  placeholder="请输入您的手机号码"/>
+					</li>
+					<li>
+						<h1>收货地址</h1>
+						<input type="text" id="adress"  placeholder="请输入您的收货地址"/>
+					</li>
+					<li>
+						<h1>邮编</h1>
+						<input type="number" id="code"  placeholder="请输入您的邮编"/>
+					</li>
+				</ul>
+				<button type="button" class=" bnt1 cz_true   bnt_chane mui-btn-red">修改</button>
+				<button type="button" class=" bnt2 cz_true cad_bnt  bnt_true mui-btn-red">确认</button>
+			</div>
+			 
+		</div>
+		</div>
+
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/pagejs/adress.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function(){
+				plusReady();
+				adress();
+			})
+		</script>
+	</body>
+</html>

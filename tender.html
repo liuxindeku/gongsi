@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>金刚金服</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="demo-files/demo.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/fonts.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/jgjf.css" media="screen, projection" />
+		<link rel="stylesheet" href="css/add.css" type="text/css" media="screen, projection" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/vue.js"></script>
+
+		<style>
+			.add .wid100 p:first-child {
+				width: 28%;
+				text-align: center;
+			}
+			
+			.add .wid100 p {
+				width: 20%;
+				text-align: center;
+			}
+			
+			.row_3 p:first-child {
+				width: 28%;
+				display: inline-block;
+				text-align: center;
+			}
+			
+			.row_3 p {
+				display: inline-block;
+				width: 20%;
+				text-align: center;
+			}
+			
+			body {
+				background: #edebec;
+			}
+			
+			.tender_ul li {
+				border-bottom: 10px solid #ececec!important;
+			}
+			
+			.biaoti {
+				height: 45px;
+				line-height: 45px;
+				color: #fd7c76;
+				font-size: 16px;
+				text-align: center;
+			}
+			
+			.main {
+				width: 120px;
+				height: 120px;
+				position: absolute;
+				right: -5px;
+				top: 22%;
+				z-index: 12;
+			}
+			
+			.buse {
+				width: 78px;
+				height: 78px;
+				border-radius: 50%;
+				position: absolute;
+				right: 4%;
+				top: 38%;
+				background: #ff6158;
+				z-index: 10;
+			}
+			
+			.main_full {
+				width: 120px;
+				height: 120px;
+				position: absolute;
+				right: -5px;
+				top: 22%;
+				z-index: 12;
+			}
+			
+			.buse_full {
+				width: 78px;
+				height: 78px;
+				border-radius: 50%;
+				position: absolute;
+				right: 4%;
+				top: 38%;
+				background: #FCA392;
+				z-index: 10;
+			}
+			
+			.buse_full>div {
+				width: 66px;
+				height: 66px;
+				border-radius: 50%;
+				background: #FF5C57;
+				margin: 6px auto;
+				line-height: 66px;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			.space {
+				float: left;
+				width: 100%;
+				height: 1px;
+				background: #ECECEC;
+				margin-top: 10px;
+				display: block;
+			}
+			
+			.tender_li {
+				padding-bottom: 20px;
+				padding-top: 5px;
+				position: relative;
+			}
+			
+			.add h2 {
+				display: inline-block;
+			}
+			
+			.add .newperbg {
+				float: left;
+				width: 60px;
+				margin-top: -8px;
+			}
+			
+			.bleu {
+				background: #7fcef5;
+				color: #fff;
+				display: inline-block;
+				border-radius: 5px;
+				margin-left: 5px;
+				padding: 0 2px;
+				font-size: 10px;
+				vertical-align: bottom;
+				height: 16px;
+				line-height: 16px;
+			}
+			
+			.redu {
+				background: #e35644;
+				color: #fff;
+				display: inline-block;
+				border-radius: 5px;
+				margin-left: 5px;
+				padding: 0 2px;
+				font-size: 10px;
+				vertical-align: bottom;
+				height: 16px;
+				line-height: 16px;
+			}
+			
+			.new_ma img {
+				width: 20px;
+				vertical-align: bottom;
+			}
+			
+			.new_ma span {
+				height: 16px;
+				line-height: 16px;
+				border: 1px solid #e35644;
+				color: #e35644;
+				display: inline-block;
+				border-radius: 5px;
+				margin-left: 5px;
+				padding: 0px 5px;
+				font-size: 10px;
+				vertical-align: bottom;
+			}
+			
+			.tzhrbg {
+				background-color: #fff;
+				height: 250px;
+				background-size: cover;
+				padding-top: 20px;
+			}
+			
+			.bttz {
+				width: 120px;
+				display: block;
+				margin: 0 auto 20px auto;
+			}
+			
+			.mban {
+				margin-bottom: 10px;
+				background: #fff;
+				border-bottom: 1px solid #F5F5F5;
+			}
+			
+			.mban span {
+				display: inline-block;
+				width: 49%;
+				height: 45px;
+				line-height: 45px;
+				background: #fff;
+				text-align: center;
+				padding-left: 15px;
+			}
+			
+			.mban span img {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				line-height: 45px;
+				vertical-align: middle;
+			}
+			
+			.ul1,
+			.ul2 {
+				background: #fff;
+			}
+			
+			.ul1 li,
+			.lix li,
+			.liy li {
+				height: 45px;
+				line-height: 45px;
+				border-bottom: 1px solid #f5f5f5!important;
+				padding-left: 20px;
+			}
+			
+			.lix,
+			.liy {
+				background: #FFFFFF;
+				margin-top: -10px;
+				margin-bottom: 10px;
+				display: none;
+			}
+			
+			.mui-popover {
+				width: 100%;
+				height: 150px;
+				margin-top: 2px
+			}
+			
+			.mui-content {
+				padding: 10px;
+			}
+			
+			.mui-scroll-wrapper {
+				z-index: 999;
+				margin: 0
+			}
+			
+			.mui-popover .mui-table-view {
+				background: #fff;
+			}
+			
+			.mui-content {
+				padding: 0;
+			}
+			
+			.mui-table-view:after {
+				content: '';
+				height: 0;
+			}
+			
+			.lefth {
+				float: left;
+				width: 12%;
+				vertical-align: top;
+				margin-top: 48px;
+				padding-left: 15px;
+			}
+			
+			.lefth img {
+				width: 100%;
+				margin-bottom: 11px;
+			}
+			
+			.frid {
+				display: flex;
+				width: 88%!important;
+				font-size: 14px;
+				vertical-align: top;
+			}
+			
+			.frid span {
+				display: inline-block;
+				flex: 1;
+				margin-top: 14px;
+				text-align: center;
+			}
+			
+			.list ul {
+				background: none;
+				padding: 0;
+			}
+			
+			.list ul li {
+				background: #fff;
+				margin: 0;
+				border-radius: 0;
+				padding-left: 15px;
+			}
+			.full{
+				background-color: #fff;
+				display: none;
+			}
+			
+			.full>div{
+				text-align: center;
+				padding: 0;
+				margin: 0;
+				display:block;
+				height:30px;
+				background-color: #fff;
+				line-height: 30px;
+				border-top: 1px solid #F2F2F5;
+				color: #555555;
+			}
+			.full>div:last-child{
+				margin-bottom: 10px;
+				
+			}
+			#yimanbiao  img {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				line-height: 45px;
+				vertical-align: middle;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="img/loading2.gif" /></div>
+
+				<div class="content tender_ul" id="tender" v-cloak>
+
+					<!--<div class="biaoti">[&nbsp;&nbsp;理财专区&nbsp;&nbsp;]</div>-->
+
+					<div class="mban">
+						<span id="span1"><i id="i1">利率</i><img :src="src" /></span>
+						<span id="span2"><i id="i2">期限</i><img :src="src1" /></span>
+					</div>
+					<ul class="lix">
+						<li class="xli">10%以下</li>
+						<li class="xli">10%-15%</li>
+						<li class="xli">15%以上</li>
+					</ul>
+					<ul class="liy">
+						<li class="yli">0 - 29天</li>
+						<li class="yli">30-59天</li>
+						<li class="yli">≥ 60天</li>
+					</ul>
+
+					<div class="connerdiv invest">
+						<div class="list add">
+							<ul class="mui-table-view new">
+								<li class="mui-table-view-cell fn-clear fn_cont tender_li " v-for="kt in kts" v-cloak v-bind:rag='kt.nid'>
+									<div class="main"></div>
+									<div class="buse"></div>
+									<h2>{{kt.name}}</h2>
+									<span class="new_ma" v-if="kt.tiro=='1'" /><img src="images/ymkj/newper.png" /><span>新手</span></span>
+									<span class="bleu" v-if="kt.status_name=='收益中'" />收益中</span>
+									<span class="redu" v-if="kt.status_name=='投资中'" />投资中</span>
+									<div class="space"></div>
+									<div class="spa"></div>
+									<div class="sylist_left wid100">
+										<p class="lilv"><span>{{kt.apr}}</span>% <i v-if="kt.apr_extra>0">+{{kt.apr_extra}}%</i></p>
+										<p>{{kt.period}}</p>
+										<!--<p class="sylist_left_djs" v-bind:rag='kt.begin_time' v-if="kt.begin_time" ></p>-->
+										<p>{{kt.wait}}</p>
+									</div>
+									<div class="row_3">
+										<p>预期年化收益</p>
+										<p>投资期限</p>
+										<p>可投金额</p>
+									</div>
+
+									<!--<div class="spa"></div>
+							<div class="jdt_box">
+								<div class="jdt_l" v-bind:tag='kt.scale'> 
+									<img src="images/ymkj/jdt.png" class="jdt_c" style="height: 5px;"/>
+								</div>
+								<div class="ld">{{kt.scale}}%</div>
+							</div>
+							<h6>剩余金额<span>&nbsp;{{kt.wait}}&nbsp;</span>元</h6>-->
+								</li>
+							</ul>
+							
+							<div id="yimanbiao" class="biaoti" style="margin-top: -10px;">以下为近期已满标项目<img :src="src2" /></div>
+							<ul id="full" class="full">
+								<div v-bind:value="fullb.value" v-for="fullb in fullbs" class="full_miambiao full_mb">{{fullb.name}}</div>
+							</ul>
+							<ul class="mui-table-view new mb_xm">
+								<li class="mui-table-view-cell fn-clear fn_cont tender_li" v-for="yt in yts" v-cloak v-bind:rag='yt.nid'>
+									<div class="main_full"></div>
+									<div class="buse_full">
+										<div>{{yt.status_name}}</div>
+									</div>
+									<h2>{{yt.name}}&nbsp;&nbsp;<span class="new_ma" v-if="yt.tiro=='1'" /><img  src="images/ymkj/newper.png"/><span>新手</span></span></h2>
+									<!--<img src="images/ymkj/newper_b.png" class="newperbg" v-if="yt.tiro=='1'"/>-->
+									<div class="spa"></div>
+									<div class="sylist_left wid100">
+										<p class="lilv"><span>{{yt.apr}}</span>% <i v-if="yt.apr_extra>0">+{{yt.apr_extra}}%</i></p>
+										<p>{{yt.period}}</p>
+									</div>
+									<div class="spa"></div>
+									<div class="jdt_box pad0">
+										<div class="jdt_l" style="background: orangered !important;"></div>
+									</div>
+									<h6>剩余金额<span>&nbsp;&nbsp;{{yt.wait}}&nbsp;&nbsp;</span>元</h6>
+								</li>
+							</ul>
+							<div class="tzhrbg" id="topte">
+								<img class="bttz" src="img/touzi.png" />
+								<div class="lefth">
+									<img src="img/hg1.png" />
+									<img src="img/hg2.png" />
+									<img src="img/hg3.png" />
+								</div>
+								<div class="frid">
+									<span>
+				            	姓名
+				            </span>
+									<span>
+			            		投资金额
+				            </span>
+									<span>
+			            		最后投资日
+				            </span>
+								</div>
+								<div class="frid" v-for="top in toptender">
+									<span>
+			            		{{top.name}}
+				            </span>
+									<span>
+			            		{{top.money}}
+				            </span>
+									<span>
+			            		{{top.lasttime}}
+				            </span>
+								</div>
+							</div>
+
+							<div class="footer_tx" style="margin-top: 20px;margin-bottom: 0;">——市场有风险，投资需谨慎——</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="js/pagejs/down.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/pagejs/tender.js"></script>
+		<script src="js/echarts.js"></script>
+
+	</body>
+
+</html>

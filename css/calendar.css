@@ -1,0 +1,143 @@
+
+
+.calendar {
+  display: none;
+  width: 100%;
+}
+.calendar-title {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  background: #FE4A33;
+
+}
+.calendar-title a.title {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+}
+#backToday {
+ display: none;
+}
+.calendar-title .arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -60px;
+  right: 0;
+  width: 120px;
+  
+}
+.calendar-title .arrow span {
+	line-height: 38px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.calendar-title .arrow span:hover {
+  color: #ccc;
+}
+.calendar-title .arrow-prev {
+  float: left;
+}
+.calendar-title .arrow-next {
+  float: right;
+}
+.calendar-week{overflow: hidden;padding-left: 8px;padding-right: 8px;background: #fff;}
+.calendar-date {
+	padding: 8px;
+  overflow: hidden;
+	border-bottom: 1px solid #e7e7e7;
+}
+.calendar-week .item{  
+	float: left;
+  width: 14.2857%;
+  height: 25px;
+  line-height: 25px;
+  background: #fff;
+  text-align: center;
+}
+.calendar-date .item {
+  float: left;
+  width: 14.2857%;
+  height: 50px;
+  line-height:50px;
+  color: #aaa;
+  text-align: center;
+}
+.calendar-week {
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+.calendar-date {}
+.calendar-date .item {
+ 	border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+.calendar-date .item:hover,
+.calendar-date .item-curMonth:hover {
+ color: #fff;
+ background: #FE4A33;
+ -moz-box-shadow: 0 0 10px #fe4a33;
+ box-shadow: 0 0 10px #FE4A33;
+ -webkit-box-shadow: 0 0 10px #fe4a33;
+}
+.calendar-date .item-curMonth {
+color: #59698A;
+}
+.calendar-date .item-curDay{
+	border: 1px solid #FE4A33;
+	color: #FE4A33;
+	position: relative;
+}
+.calendar-date .item-curDay i{
+	font-size: 10px;
+  position: absolute;
+  font-style: normal;
+  top: -5px;
+  right: -3px;	
+}
+
+
+.calendar-date .item-selected,
+.calendar-date .item-selected:hover {
+  color: rgb(255, 128, 142);
+  background: #cde9d9;
+}
+.calendar-today {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 90px;
+  height: 48px;
+  padding: 6px 10px;
+  background-color: rgb(255, 128, 142);
+  border-radius: 5px;
+}
+.calendar-today .triangle {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  margin-top: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent rgb(255, 128, 142) transparent transparent;
+}
+.calendar-today p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+
+.item_alqd{background-image:url(../images/index/qdsmile02.png) !important;background-repeat:no-repeat;background-position: 13px 21px;}

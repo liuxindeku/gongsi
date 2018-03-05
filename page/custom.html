@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>客服反馈</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+</head>
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+		<!--客服与反馈-->
+		<div class="kf_phone">
+			<h1>欢迎您</h1>
+			<h2>任何疑问、建议投诉等，可通过电话客服咨询</h2>
+			<div class="kf_all">
+				<div class="kf_box zx_kf">
+					<img src="../images/ymkj/kfzaixian.png" alt="" class="kefphone" />
+					<h3>在线客服</h3>
+				</div>
+				
+				<div class="kf_box dh_kf">   
+					<img src="../images/ymkj/kfphone.png" alt="" class="kefphone" />
+					<h3>电话客服</h3>
+				</div>
+				
+			</div>
+		</div>
+		<!--<ul class="user_li">
+			<li>
+				<h2>意见反馈</h2>
+				<h3></h3>
+			</li>
+		</ul>-->
+		<!--<div class="gzh_li">
+			<div class="gzh_li_left">
+				<h1>微信公众号</h1>
+				<h2>09：00~21：00</h2>
+			</div>
+			<h3>jingangbank</h3>
+		</div>-->
+		<div class="jg_problem">
+			<h1>猜您遇到以下问题</h1>
+			<h2 class="och_help_list" >更多请移至帮助中心></h2>
+			<ul>
+				<li><h1>充值失败</h1></li> 
+				<li><h1>不能使用加息券</h1></li>
+				<li><h1>邀请推荐奖励</h1></li>
+				<li><h1>红包使用的条件</h1></li>
+				<li><h1>安全保障</h1></li>
+				<li><h1>积分获得方式</h1></li>
+			</ul>
+		</div>
+		<!--电话-->
+		<div class="winbox kfdh_go">
+			<div class="winbg"></div>
+			<div class="win_cont">
+				<h1>电话客服</h1>
+				<h3>400-101-2770</h3>
+				<ul class="kf_bnt">
+					<li class="br1">取消</li>
+					<li>去关注</li>
+				</ul>
+			</div>
+		</div>
+		<!--微信公众号-->
+		<!--电话-->
+		<div class="winbox kfdh_go">
+			<div class="winbg"></div>
+			<div class="win_cont">
+				<h1>电话客服</h1>
+				<p>金刚金服官方公众号已复制到您的剪贴<br />
+板，您可以在“微信”-“通讯录”-“添<br />
+加朋友”-“公众号”中搜索并关注
+</p>
+				<ul class="kf_bnt">
+					<li class="br1">取消</li>
+					<li>呼叫</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="../js/common.js"></script>
+		
+		<script src="../js/pagejs/down.js"></script>
+		<script src="https://qiyukf.com/script/4e59f9ae012b3488a70fe22de75ada21.js"></script>
+		<script type="text/javascript">
+		mui.plusReady(function(){
+				plusReady();
+			if(user_id){
+			   	mui.post(weburl+"discovery/getService",{user_id:user_id},function(data){
+					if(data.code==1){
+						var real_name=data.msg.real_name;
+						var reg_date=data.msg.reg_date;
+						var last_login=data.msg.last_login
+						var sex=data.msg.sex;
+						var mobile_phone=data.msg.phone;
+						 ysf.config({
+					        "data": JSON.stringify([
+					            {"key": "real_name", "value": real_name},
+					            {"key": "mobile_phone", "value": mobile_phone},
+					            {"key": "email", "hidden": true},
+					            {"index": 1, "key": "sex", "label": "性别", "value": sex},
+					            {"index": 5, "key": "reg_date", "label": "注册日期", "value": reg_date},
+					            {"index": 6, "key": "last_login", "label": "上次登录时间", "value": last_login}
+					        ])
+					    });		
+					}
+			   })
+			   	
+		  	}
+		  	mui("body").on("tap",".zx_kf",function(){
+		  		$("#YSF-BTN-HOLDER").click();
+		  	})
+		})
+		</script>
+	</body>
+</html>

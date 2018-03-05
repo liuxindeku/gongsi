@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>邀请好友</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+		<body>
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div id="about_pages" >
+				
+						<ul class="acti_box" v-cloak>
+							<li class="index_list"  v-for="item in lists" v-bind:rag="item.id">
+								<h1>{{item.name}}</h1>
+								<div >
+									<img v-bind:src="item.thumb" alt="" />
+								</div>
+								<div class="act_detail">
+									<h2>查看详情</h2>  
+									<h3></h3>
+								</div>
+							</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+			<script src="../js/common.js"></script>
+			<script src="../js/pagejs/activity.js"></script>
+			<script src="../js/pagejs/down.js"></script>
+		</body>
+
+</html>

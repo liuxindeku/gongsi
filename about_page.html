@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>金刚金服</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="img/loading2.gif"/></div>
+				<div id="about_page" v-cloak>
+					<div class="more_per_box och_person_infor"  v-cloak v-if="phone">
+						<div class="more_per">
+							<div class="more_tx"><img v-bind:src="avatar"/></div>
+							<h1 v-cloak>{{phone}}</h1>
+							<div class="rzbox">
+								<img src="img/rz01.png" v-cloak v-if="phone" />
+								<img src="img/rz02.png" v-cloak v-if="auth_status=='1'" />
+							</div>
+						</div>
+					</div>
+					<div class="more_per_box" v-cloak v-else>
+						<div class="more_per">
+							<button class="about_login mui-btn-red och_login">登录</button>
+							<button class="about_reg mui-btn-jg och_user_reg1">注册</button>
+						</div>
+					</div>
+
+					
+					<ul class="user_li  about_li">
+						<li class="och_activity">
+							<h1 style="background:url(images/jxhd.png) no-repeat;background-size:18px ;background-position:0 1px ;"></h1>
+							<h2>精选活动</h2>
+							<h3></h3>
+						</li>
+						<li class="och_notice_list">
+							<h1 style="background-position: 0px -99px;"></h1>
+							<h2>公告动态</h2>
+							<h3></h3>
+						</li>
+						<li class="newsboxa och_my_news my_news_bnt">
+							<h1 style="background-position: 0px -144px;"></h1>
+							<h2>我的消息</h2>
+							<h3></h3>
+							<h4 class="new_red"  v-if="noread" v-cloak><span v-if="noread>99">99+</span><span v-else>{{noread}}</span></h4>
+							<h4 class="new_red" v-else v-cloak><span>0</span></h4>
+						</li>
+						<li style="display: none;" class="newsboxb och_load_zc">
+							<h1 style="background-position: 0px -144px;"></h1>
+							<h2>我的消息</h2>
+							<h3></h3>
+							<h4 class="new_red" v-cloak><span v-if="noread">{{noread}}</span><span v-else>0</span></h4>
+						</li>
+
+						<li class="och_help_list">
+							<h1 style="background-position: 0px -187px;"></h1>
+							<h2>帮助中心</h2>
+							<h3></h3>
+						</li>
+						<li class="och_custom" >
+							<h1 style="background-position: 0px -230px;"></h1>
+							<h2>客服与反馈</h2>
+							<h3></h3>
+						</li>
+						<!--<li class="och_know_us" >
+							<h1 style="background-position: 0px -277px;"></h1>
+							<h2>关于我们</h2>
+							<h3></h3>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/common.js"></script>
+		
+		<script src="js/pagejs/about_page.js"></script>
+		<script src="js/pagejs/down.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function(){
+				plusReady(); 
+				about_page();
+			})
+		</script>
+	</body>
+
+</html>

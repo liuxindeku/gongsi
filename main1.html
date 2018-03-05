@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>金刚金服</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="css/style.css" charset="UTF-8" media="screen, projection" />
+		<link rel="stylesheet" href="css/mui.min.css" charset="UTF-8" media="screen, projection" />
+		<link rel="stylesheet" href="css/css.css" charset="UTF-8" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/ymkj.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/jgjf.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/index1.css" media="screen, projection" />
+		<script src="js/vue.js"></script>
+		<script src="js/mui.js"></script>
+		<script src="js/jquery.js"></script>
+			
+	</head>
+	<body> 
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="img/loading2.gif"/></div>
+				<div id="slider" class="mui-slider">
+
+					<div class="mui-slider-group mui-slider-loop" id="pic-scroll">
+
+					</div>
+					<div class="mui-slider-indicator">
+
+					</div>
+				</div>
+				<div id="newb" v-cloak>
+					<div class="index_new index_xsbz">
+						<ul class="fn-clear">
+							<a id="yqyj" class="">
+								<li>
+									<div class="yqyj_box">
+										<div class="yqyj_left">
+											<p>签到夺宝</p>
+											<p class="bei">积分越大  奖励越大</p>
+										</div>
+										<label><img src="images/qiandao.png" width="100%" ></label>
+									</div>
+								</li>
+							</a>
+							<a class="">
+								<li style="border: 0;">
+									<div class="yqyj_box">
+										<div class="yqyj_left">
+											<p>积分商城</p>
+											<p class="bei">更多积分  更多兑换</p>
+										</div>
+										<label> <img  src="images/jifen.png" width="100%" ></label>
+									</div>
+								</li>
+							</a>
+							<a id="yqyj" class="och_help_list">
+								<li>
+									<div class="yqyj_box">
+										<div class="yqyj_left">
+											<p>你问我答</p>
+											<p class="bei">金刚金服入门宝典</p>
+										</div>
+										<label><img src="images/a.png"  width="100%" ></label>
+									</div>
+								</li>
+							</a>
+							<a id="yqyj" class="och_custom">
+								<li>
+									<div class="yqyj_box">
+										<div class="yqyj_left">
+											<p>在线客服</p>
+											<p class="bei">工作日：9:00-17:30</p>
+										</div>
+										<label><img src="images/kefu.png" width="100%" ></label>
+									</div>
+								</li>
+							</a>
+						</ul>
+					</div>
+					<div class="tell">
+						<span>公告</span><i>&nbsp;&nbsp;|&nbsp;&nbsp;</i>
+						<div class="och_notice_list"><img src="images/laba.png"/><a href="#">关于与易保全合作的公告</a></div>
+					</div>
+					<div class="commend_head"><img src="images/fire.png"/><b>每日推荐</b><p>体验一次你就爱上</p></div>
+					<div class="newb_box och_tender_detail" v-bind:rag='borrow_nid'>
+						<div class="newb">
+							<!--<img src="img/ymkjnewbg.png" class="newbg"/>-->
+							<h1>{{name}}新手标<img src="images/xinshou.png" alt="新手专享" />
+							<span class="dot_left"></span>
+							<span class="dot_right"></span>
+							</h1>
+							<img src="images/yuan.png" class="yuan_bg"/>
+							<h4 v-cloak>
+								{{borrow_apr}}
+								<span>%</span><p>年化收益率</p></h4>
+							<div class="newc_01">
+								<img src="images/clock.png" />
+								<p v-cloak>投资期限<b>{{borrow_period_name}}</b></p>
+							</div>
+							<div class="newc_02">
+								<p v-cloak>{{tender_account_min}}元起投</p> 
+							</div>
+							<div class="progressbar">
+								<p class="progressbar_grey">
+									<div class="progressbar_ora">
+										<i></i>
+									</div>
+								</p>
+								<i>{{scale}}%</i>
+							<p>剩余投资额：{{borrow_account_wait}} 总投资额：{{amount}}</p>	
+							</div>
+							
+							<div v-if="status_name=='借款中'" >
+								<a class="ljtz tz_bnt" v-if="begin_time" v-bind:rag='begin_time'>倒计时</a>
+								<a class="ljtz tz_bnt" v-else-if="borrow_account_wait=='0.00'">已满标</a>
+								<a class="ljtz tz_bnt" v-else >立即投资</a>
+							</div>
+							<a class="ljtz tz_bnt" v-else-if="status_name=='复审中'">已满标</a>
+							<a class="ljtz tz_bnt" v-else>{{status_name}}</a>
+						</div>
+					</div>
+
+				</div>
+				
+				<div id="borrowsshow" v-cloak>
+					<div class="commend_head">
+					   <img src="images/zan.png"/>
+					   <b>热门推荐</b>
+					   <p>低门槛 高收益</p> 
+					   <a href="#">查看更多</a>
+				    </div>
+					<div class="connerdiv invest index_list fn-clear">
+						<div class=" list fn-clear">
+							<ul class="mui-table-view  fn-clear">
+								<li class="mui-table-view-cell fn-clear och_tender_detail" v-cloak v-for="item in items" v-bind:rag='item.borrow_nid'>
+									<h2 class="touziname" rag="111"><span class="howday">{{item.borrow_period_name}}</span>{{item.name}}</h2>
+									<!--<img src="images/ymkj/newper.png" class="newperbg"/>-->
+									<div class="spa"></div>
+									<div class="sylist_left">
+										<p class="lilv w70"><span>{{item.borrow_apr1}}</span>%</p>
+										<p class="w30"><img src="images/bluemoney.png" alt="" />可投金额  <b>{{item.borrow_account_wait}}</b></p>
+										<p class="w70">年化收益率</p>
+										<p class="w30"><img src="images/yellowmoney.png" alt="" />总投金额  <b>{{item.amount}}</b></p>
+									</div>
+									<div  v-if="item.status_name=='借款中'" >
+										<div class="qg tz_bnt" v-if='item.begin_time' v-bind:rag='item.begin_time'>倒计时</div>
+										<div class="qg qg_hui"   v-else-if="item.borrow_account_wait=='0.00'" >已满标</div>
+										<div class="qg" v-else>立即投资</div>
+									</div>
+									
+									
+									<div class="qg qg_hui" v-else>{{item.status_name}}</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="xmsy">
+						<li>
+							<img src="images/shouyi.png" alt="" /> 收益稳定
+						</li>
+						<li>
+							<img src="images/touming.png" alt="" /> 项目透明
+						</li>
+						<li>
+							<img src="images/linghuotouzi.png" alt="" /> 灵活投资
+						</li>
+					</ul>
+					<div class="tell dh_kf">
+						<img src="images/kefudianhua.png" />
+						<p  style="color: #000000;">客服电话：
+							<a style="color: #000000;">400-101-2770</a>
+						</p>
+					</div>
+					<div class="footer_tx">市场有风险，投资需谨慎
+		
+					</div>
+					<span class="foo_left"></span>
+					<span class="foo_right"></span>
+				</div>
+
+			</div>
+		</div>
+		<div class="gxb">
+			<div class="gxb_bg"></div>
+			<div class="gxb_cont">
+				<h1>请去商店下载新版本 v <span></span></h1>
+				<pre></pre>
+				<div class="gxbnt"></div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/common.js"></script>
+	<script src="js/pagejs/main.js"></script>
+	<script src="js/pagejs/update.js"></script>
+	<script type="text/javascript">
+		mui.plusReady(function() {
+			plusReady();
+			main();
+			appupdate()
+		})
+		mui(".gxb").on("tap", ".gxbnt", function() {
+			if(plus.os.name == 'iOS') {
+				var url = 'itms-apps://itunes.apple.com/cn/app/hello-h5+/id1271318017?l=zh&mt=8';
+				plus.runtime.openURL(url);
+			} else {
+				plus.runtime.openURL('https://www.51jingang.com/?download');
+			}
+		})
+	</script>
+	<script src="js/pagejs/down.js"></script>
+
+</html>

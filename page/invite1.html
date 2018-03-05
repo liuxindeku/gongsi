@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>邀请好友</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+
+	<body>
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div id="loading"><img src="../img/loading2.gif" /></div>
+					<div class="banlik_box" style="background: #ffe7e4;display: none;">
+						<img src="../images/invite01.png" />
+						<div class="banlink_bnt">
+							<a class="shareHref"><img src="../images/invitebnt.png" class="invit_bnt inv_bnt" /></a>
+							<div class="yqm">
+								<h1>我的邀请码：</h1>
+								<h2></h2>
+								<input type="hidden" class="yq" />
+							</div>
+							<!--<button class="inv_fz" aria-label="复制成功！">复制邀请码</button>-->
+						</div>
+						<img src="../images/invite02.png" />
+						<img src="../images/invite03.png" />
+					</div>
+				</div>
+			</div>
+
+			<script src="../js/common.js"></script>
+			<script src="../js/pagejs/invite.js"></script>
+			<script src="../js/pagejs/share.js"></script>
+			<script src="../js/pagejs/down.js"></script>
+			<script src="../js/clipboard.min.js"></script>
+			<!--复制邀请码，IOS跑不了-->
+			<!--<script type="text/javascript">
+				var clipboard = new Clipboard('.inv_fz');
+
+				clipboard.on('success', function(e) {
+					var msg = e.trigger.getAttribute('aria-label');
+					alert(msg);
+				
+					e.clearSelection();
+				});
+			</script>-->
+
+		</body>
+
+</html>

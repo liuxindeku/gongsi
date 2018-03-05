@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>邀请好友</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index1.css" />
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery.qrcode.min.js" ></script>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".his_a").click(function() {
+					var htg = $(this).attr("tag");
+					var hl = '.' + htg;
+					if($(hl).attr("tat") == 'y') {
+						$(hl).hide();
+						$(hl).attr("tat", "n");
+					} else {
+						$(".his_b").hide();
+						$(".his_b").attr("tat", "n");
+						$(hl).attr("tat", "y");
+						$(hl).show();
+					}
+
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div class="banlik_box" style="background: #ffe7e4;display: none;">
+					
+					<div style="background: #f7f7f7;" class="usertleft cztx">
+						<div class="invite_title"><img src="../images/invite/invite3.png" alt="" /></div>
+						<div style="margin-top: -60px; z-index: 1000;">
+							<div style="overflow: hidden;">
+								<div class="invite_box">
+									<h2>1</h2>
+									<div class="invite_box_num">
+										<p>邀请好友扫描二维码</p>
+										<div class="invite_box_num_right">
+											<div id="qrcode"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="invite_box" id="forVue">
+									<h2>2</h2>
+
+									<div class="txyqm invite_box_num">
+										<p>告知好友，在注册时的推荐人信息中，填写您的邀请码</p>
+										<div class="invite_box_num_right">
+											<img src="../images/invite/my_yqm.png" data-bd-imgshare-binded="1">
+											<h5>{{msg}}</h5></div>
+											<input type="hidden" name="" id="" :value="msg" v-model="msg" class="yq" />
+									</div>
+								</div>
+
+								<div class="invite_box">
+									<h2>3</h2>
+									<div class="invite_box_num">
+										<p>一键分享到各个聊天工具</p>
+
+										<div class="sha_box invite_box_num_right shareHref">
+											<img src="../images/invite/wechat.png" class="bnt_tsina" data-bd-imgshare-binded="1">
+											<img style="transform: scale(0.7); width: 48px; height: 48px;" src="../images/invite/pengyouquan.jpg" class="bnt_weixin" data-bd-imgshare-binded="1">
+											<img src="../images/invite/QQ.png" class="bnt_sqq" data-bd-imgshare-binded="1">
+										</div>
+										<div style="display: none;" class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1514108907599">
+											<a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+											<a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+											<a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+										</div>
+									</div>
+
+								</div>
+								<style type="text/css">
+									.bdsharebuttonbox {
+										float: left;
+										width: 100%;
+										height: 50px;
+										position: relative;
+									}
+									
+									.bdsharebuttonbox a {
+										width: 30px;
+										height: 35px;
+										display: block;
+										position: absolute;
+										background: none;
+									}
+									
+									.bds_tsina {
+										top: -50px;
+										left: 60px;
+									}
+									
+									.bds_weixin {
+										top: -50px;
+										left: 110px;
+									}
+									
+									.bds_sqq {
+										top: -50px;
+										left: 170px;
+									}
+								</style>
+							</div>
+						</div>
+
+						<div class="grsz" style="margin-top: 10px;"><img src="../images/invite/my_person.png" alt="" />我的邀请</div>
+						<ul  id="forVue2" class="invite_num xfk_re">
+							<li>
+								<div class="xfkbox shadow_b" style="display: none; opacity: 1;">
+									<div class="xfk">
+										<h1>一级邀请人</h1>
+										<h2></h2>
+										<h1>二级邀请人</h1>
+									</div>
+									<div class="xfk">
+										<h3>1</h3>
+										<h2>+</h2>
+										<h3>0</h3>
+									</div>
+								</div>
+								<h4>邀请总人数(人)</h4>
+								<p>{{user_count}}</p>
+							</li>
+							<li>
+								<div class="xfkbox shadow_b" style="display: none; opacity: 1;">
+									<div class="xfk">
+										<h1>一级邀请人</h1>
+										<h2></h2>
+										<h1>二级邀请人</h1>
+									</div>
+									<div class="xfk">
+										<h3>0 </h3>
+										<h2>+</h2>
+										<h3>0</h3>
+									</div>
+								</div>
+								<h4>已投资人数(人)</h4>
+								<p>{{tender_counts}}</p>
+							</li>
+							<li>
+								<div class="xfkbox shadow_b" style="right: 220px; display: none; opacity: 1;">
+									<div class="xfk">
+										<h1>一级邀请人</h1>
+										<h2></h2>
+										<h1>二级邀请人</h1>
+									</div>
+									<div class="xfk">
+										<h3>0 </h3>
+										<h2>+</h2>
+										<h3>0</h3>
+									</div>
+								</div>
+								<h4>已获推荐奖励(元)</h4>
+								<p>{{awards}}</p>
+							</li>
+						</ul>
+						<div id="Vued">
+							
+						
+						<div v-for="item in items"  class="hist_tab" style="margin-bottom: 20px;">
+							<h3>邀请人<span class="bword add_morebox">{{item.mobile}}</span></h3>
+							<div style="border: 1px solid #f7f7f7;">
+								<div style="background-color: #f7f7f7;" class="hist_t">
+									<span>注册时间</span>
+									<span>投资次数</span>
+									<span>推广奖励</span>
+								</div>
+								<div class="hist_t his_a" tag="1">
+									<span>{{item.regtime}}</span>
+									<span>{{item.tender_count}}</span>
+									<span>{{item.award}}</span>
+								</div>
+							</div>
+						</div>
+						</div>
+							<div class="tell dh_kf">
+							<img src="../images/kefudianhua.png" />
+							<p style="color: #000000;">客服电话：
+								<a style="color: #000000;">400-101-2770</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script src="../js/common.js"></script>
+			<script src="../js/pagejs/invite.js"></script>
+			<script src="../js/pagejs/share.js"></script>
+			<script src="../js/pagejs/down.js"></script>
+			<script src="../js/clipboard.min.js"></script>
+			<script src="../js/invite.js"></script>
+	</body>
+
+</html>

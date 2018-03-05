@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>金刚金服</title>	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="misapplication-tap-highlight" content="no"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<link rel="stylesheet" href="css/style.css"  charset="UTF-8"/>
+	<style>
+		html,body{
+			height: 100%;
+			background-color: #f0f0f0;			
+		}
+	</style>
+</head> 
+<body>
+<header>	
+	<h1 id="title"></h1>
+	<a id="closebtn" url="#" class="btnHl"><img src="images/ymkj/back_bnt.png" class="topnav_bnt_a" /></a>
+	<!--<a id="kfbtn" url="#" class="btnHr_b"  onclick="och('page/custom.html','客服与反馈','518')"><img src="images/ymkj/kf_bnt.png" class="topnav_bnt_b zxkf"/></a>-->
+	<a id="flushbtn" url="#" class="btnHr"><img src="images/ymkj/return_bnt.png" class="topnav_bnt"/></a>
+</header>
+<div style="background:url(img/loading.gif) 50% 50% no-repeat;height: 100%;width: 100%;opacity:0.1;"></div>
+	<script src="js/jquery.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script language="JavaScript">
+	var isnew=true;
+	var msubweb=null;
+	var substyle = {
+		top: '43px',
+		bottom:'0px',
+		bounce: 'vertical',
+		scrollIndicator:'vertical',
+		scalable:false
+	};
+
+	function setTitle(title){
+		$("#title").html(title);
+	}
+	function flush(){
+		msubweb.reload();
+	}
+	//创建子页面
+	function creatsub(curl){	
+//		curl=weburl+curl;
+		msubweb = plus.webview.create(curl, null, substyle,{starturl: curl});
+		plus.webview.currentWebview().append(msubweb);
+		//setTimeout('msubweb.setStyle({mask: "none"});', 5000);
+		//加载开始
+		msubweb.addEventListener('loading', function() { //叶面加载完成后才显示
+			if(isnew)
+			msubweb.hide();
+			else
+			msubweb.setStyle({mask: "rgba(0,0,0,0.1)"});
+		}, false);
+		//加载完成
+		msubweb.addEventListener('loaded', function() { //叶面加载完成后才显示
+			if(isnew)
+			msubweb.show();
+			else
+			msubweb.setStyle({mask: "none"});
+			//msubweb.endPullToRefresh();
+			//$("#title").html(msubweb.getTitle());
+			isnew=false;
+		}, false);	
+		//关闭
+		msubweb.addEventListener('close', function() { //叶面加载完成后才显示
+			mypage.close("slide-out-right"); 
+		}, false);
+	}
+	function initweb(){
+	
+		var subpage = plus.webview.currentWebview();
+		if(subpage.title)setTitle(subpage.title);
+		if(subpage.hide_top){
+			substyle.top = '0px';
+		}
+		creatsub(subpage.curl);
+		$("#hidebtn").click(function(){
+			subpage.hide("slide-out-right");
+		});
+		$("#closebtn").click(function() {
+			msubweb.canBack( function(e){
+				console.log( "是否可返回："+e.canBack );
+				if(false && e.canBack){
+					mui.back();
+					return false;
+				}else{
+					isnew=true;
+					mypage.close("slide-out-right");
+					return false ;
+				}
+			});
+		});
+		$("#flushbtn").click(function(){
+			msubweb.reload();
+		});
+		// Android处理返回键
+		plus.key.addEventListener('backbutton', function() {
+			$("#closebtn").click();
+		}, false);
+	}
+	</script>
+	
+		
+<script src="js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>自动投标</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../plugin/picker/css/mui.picker.css"/>
+	    <link rel="stylesheet" type="text/css" href="../plugin/picker/css/mui.poppicker.css"/>
+	    <script src="../plugin/picker/js/mui.picker.js"></script>
+	    <script src="../plugin/picker/js/mui.dtpicker.js"></script>
+	    <script src="../plugin/picker/js/mui.poppicker.js"></script>
+	</head>
+		<!--自动投标-->
+	<body>
+		
+			
+			
+			
+		<!--自动投标-->
+		
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+		
+		
+		<div class="zd_head">
+			<h1>已有<span>92158</span>人开启</h1>
+			<h2>自动投标规则说明</h2>
+			<h3></h3>
+		</div>
+
+		<!-- 简洁模式开关打开状态 -->
+		<div class="zdtb_kg">
+			<h1>开启自动投标</h1>
+			<div class="mui-switch mui-switch-mini mui-active" id="mySwitch">
+				<div class="mui-switch-handle"></div>
+			</div>
+		</div>
+		<div class="zdtb_cont">
+			<div class="art_01">
+				<div class="art_01_head">投标金额</div>
+				<ul class="ul_01">
+					<li class="choice">
+						<label class="radio">
+			                <input type="radio" checked="checked" name="zf01" id="zf01" value="余额全投"><i></i>
+			                <p>可用余额全投</p>
+           				</label>
+					</li>
+					<li class="choice">
+						<label class="radio">
+                			<input type="radio" name="zf01" id="zf01" value="固定余额"><i></i>
+            
+            				<p>设置固定余额</p>
+            			</label>
+					</li>
+				</ul>
+				<div class="inp_01">
+					<h1>每次投标金额</h1>   
+					<input type="text" placeholder="≥100元" class="inp_text" />
+				</div>
+			</div>
+			<div class="check_01">
+				<div class="check_k">
+					<label class="check">
+            			<input type="checkbox" name="zf01" id="zf01" value="余额全投" ><i></i>
+        				<p>不打散资金</p>
+					</label>
+
+				</div>
+				<h2>注：当标的可投金额小于自动投标金额时将不投出</h2>
+			</div>
+			<ul class="user_li mb5">
+				<li class="tzqx_sz">
+					<h2>设置投标期限</h2>
+					<h3></h3>
+					<h4></h4>
+				</li>
+				<li class="nhsy_sz">
+					<h2>设置年化收益</h2>
+					<h3></h3>
+					<h4></h4>
+				</li>
+			</ul>
+			<div class="art_01">
+				<div class="art_01_head">优惠券使用顺序</div>
+				<ul class="ul_01">
+					<li class="choice">
+						<label class="radio">
+                			<input type="radio" checked="checked" name="hb" id="" value="加息券"><i></i>
+               				<p>加息券</p>
+           				</label>
+					</li>
+					<li class="choice">
+						<label class="radio">
+                			<input type="radio" name="hb" id="" value="红包"><i></i>
+                			<p>红包</p>
+           				</label>
+					</li>
+				</ul>
+			</div>
+			<div class="check_01">
+				<div class="check_k">
+					<label class="check">
+            <input type="checkbox" name="zf01" id="zf01" value="自动清零"><i></i>
+            <p>自动清零</p>
+       				</label>
+				</div>
+				<h2>注：自动投标成功后投标金额自动清零</h2>
+			</div>
+			<button type="button" class="cz_true  mui-btn-danger">修&nbsp;&nbsp;改</button> 
+		</div>
+		</div>
+		</div>
+		<script src="../js/pagejs/down.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+			//滑动按钮获取是否选中
+			var isActive = document.getElementById("mySwitch").classList.contains("mui-active");
+			if(isActive) {
+				$(".zdtb_cont").css("height", 700)
+			} else {
+				$(".zdtb_cont").css("height", 0)
+			}
+			//滑动按钮操作时动画
+			document.getElementById("mySwitch").addEventListener("toggle", function(event) {
+				if(event.detail.isActive) {
+					$(".zdtb_cont").animate({ 
+						"height": 700
+					}, 500)
+				} else {
+					$(".zdtb_cont").animate({
+						"height": 0
+					}, 500);
+				}
+			})
+			
+			
+			
+			
+	//设置投标期限		
+	
+	var pickera = new mui.PopPicker({layer: 2});
+    pickera.setData([{
+        value: '1',
+        text: '1天',
+        children: [{
+                value: "2",
+                text: "2天"
+        },{
+                value: "3",
+                text: "3天"
+        },{
+                value: "4",
+                text: "4天"
+        },{
+                value: "5",
+                text: "5天"
+        },{
+                value: "6",
+                text: "6天"
+        },{
+                value: "7",
+                text: "7天"
+        },{
+                value: "8",
+                text: "8天"
+        }]
+    }, {
+        value: '2',
+        text: '2天',
+        children: [{
+                value: "3",
+                text: "3天"
+        },{
+                value: "4",
+                text: "4天"
+        },{
+                value: "5",
+                text: "5天"
+        },{
+                value: "6",
+                text: "6天"
+        },{
+                value: "7",
+                text: "7天"
+        },{
+                value: "8",
+                text: "8天"
+        }]
+    }])		
+		mui(".user_li").on("tap",".nhsy_sz",function(){
+			pickera.pickers[0].setSelectedIndex(0);
+			pickera.pickers[1].setSelectedIndex(0);
+			pickera.show(function(SelectedItem) {
+				var tbqxa=SelectedItem[0]["text"];
+				var tbqxb=SelectedItem[1]["text"];
+				var tbqx=tbqxa+"~"+tbqxb;
+				$(".nhsy_sz h4").html(tbqx);
+			
+				
+			})
+		})
+	
+	
+	//设置年化收益
+		var pickerb = new mui.PopPicker({layer: 2});
+   		pickerb.setData([{
+        value: '1',
+        text: '1%',
+        children: [{
+                value: "2",
+                text: "2%"
+        },{
+                value: "3",
+                text: "3%"
+        },{
+                value: "4",
+                text: "4%"
+        },{
+                value: "5",
+                text: "5%"
+        },{
+                value: "6",
+                text: "6%"
+        },{
+                value: "7",
+                text: "7%"
+        },{
+                value: "8",
+                text: "8%"
+        }]
+    }, {
+        value: '2',
+        text: '2%',
+        children: [{
+                value: "3",
+                text: "3%"
+        },{
+                value: "4",
+                text: "4%"
+        },{
+                value: "5",
+                text: "5%"
+        },{
+                value: "6",
+                text: "6%"
+        },{
+                value: "7",
+                text: "7%"
+        },{
+                value: "8",
+                text: "8%"
+        }]
+    }])		
+		mui(".user_li").on("tap",".tzqx_sz",function(){
+			pickerb.pickers[0].setSelectedIndex(0);
+			pickerb.pickers[1].setSelectedIndex(0);
+			pickerb.show(function(SelectedItem) {
+				var tbqxa=SelectedItem[0]["text"];
+				var tbqxb=SelectedItem[1]["text"];
+				var tbqx=tbqxa+"~"+tbqxb;
+				$(".tzqx_sz h4").html(tbqx);
+			})
+		})
+		</script>
+
+		<!---->
+ 		<script src="../js/common.js"></script>
+	</body>
+
+</html>

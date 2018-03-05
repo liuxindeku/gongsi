@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title></title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<style>
+			#content {
+				width: 100%;
+			}
+			
+			#content img {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="content">
+
+		</div>
+		<div id="forVue" style="display: none;">
+			<input type="hidden" name="" id="" :value="msg" v-model="msg" class="yq" />
+		</div>
+		
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/pagejs/invite.js"></script>
+		<script src="../js/pagejs/share.js"></script>
+		<script src="../js/invite.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				var xmid = plus.storage.getItem('cid');
+				plus.storage.setItem('xmid', xmid);
+				mui.post(weburl + 'index/getBannerDetail', {
+					id: xmid,
+					user_id: user_id
+				}, function(data) {
+					if(data.code == "1") {
+						$("#content").html(data.data.summary);
+						if(data.data.url != '') {
+							mui("body").on("tap", "#content", function() {
+								och(data.data.url);
+							})
+						}
+					}
+					$("#loading").hide();
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

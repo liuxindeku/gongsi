@@ -1,0 +1,18 @@
+
+#tender .select .mui-table-view-cell:after{
+	content: '';
+	height: 0;
+}
+#tender .mui-collapse{
+	display: inline-block;
+	width: 24%;
+	border-bottom: 0;
+	vertical-align: top;
+}
+.row_3 p{
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+

@@ -1,0 +1,71 @@
+
+.red {color: #faddde;border: solid 1px #980c10;background: #d81b21;background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#A51715));background: -moz-linear-gradient(top,  #ed1c24,  #A51715);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317'); font-size:14px!important;}
+}
+.red:hover { background: #b61318; background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115)); background: -moz-linear-gradient(top,  #c9151b,  #a11115); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115'); color:#fff;}
+.red:active {color: #de898c;background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');}
+.keTitle{ height: 60px; line-height: 60px; font-size: 28px; font-family: '微软雅黑'; color: #FFF; text-align: center; background: url(../images/bodyBg1.gif) repeat-x left bottom; font-weight: normal; position: absolute; width: 100%; left: 0; top: 0; z-index: 999; padding: 0px 0px 8px; opacity:0.8; }
+.keBottom{ color: #FFF; height: 60px; text-align: center; background: url(../images/bodyBg2.gif) repeat-x left top; position: absolute; width: 100%; left: 0; bottom: 0; z-index: 999; font: 18px/60px "微软雅黑"; padding: 3px 0px 5px; opacity:0.8;}
+.keBottom a,.keBottom a:hover{color:#fff;}
+/*www.jq22.com CSS结束，应用特效时，以上样式可删除*/
+/* 效果CSS开始 */
+
+.container { width: 100%; height: 100%; position: absolute; left: 0; top: 0%; }
+.container .page { height: 100%; position: relative; color:#fff;text-align:center; }
+.container .page h1{padding-top:120px; line-height:50px; display:block}
+.container .page1 img.no1 { position: absolute; left: 10px; top: 50px; -webkit-transition: all 1s ease 0s; }
+.container .page1.cur img.no1 { -webkit-transform: rotate(720deg); }
+.container .page1 img.no2 { position: absolute; left: 600px; top: 50px; -webkit-transition: all 1s ease 2s; }
+.container .page1.cur img.no2 { left: 30px; top: 100px; -webkit-transform: rotate(720deg); }
+.xiangxiatishi { position: fixed; bottom: 20px; left: 50%; -webkit-transform: translateX(-50%); -webkit-animation: dong 1s linear 0s infinite alternate; }
+@-webkit-keyframes dong {  from {
+bottom:20px;
+}
+to { bottom: 60px; }
+}
+
+.safety {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.safety_bot {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				left: 0;
+			}
+			
+			.safety_cobg {
+				width: 70% !important;
+				margin: 30px auto;
+				display: block;
+			}
+			
+			.safety h1 {
+				width: 100%;
+				font-size: 32px;
+				color: #fff;
+				text-align: center;
+				font-family: verdana;
+			}
+			
+			.safety p {
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				line-height: 25px;
+				font-size: 13px;
+				font-family: "microsoft yahei";
+				z-index: 99;
+			}
+			
+			.ladown {
+				width: 56px !important;
+				position: absolute;
+				bottom: 0;
+				display: block;
+				left: 50%;
+				margin-left: -28px;
+			}
+/* 效果CSS结束 */

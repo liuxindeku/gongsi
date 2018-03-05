@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>我的投资</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/select.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+
+		<!--我的投资.html-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<ul class="top_nav wid50">
+					<li class="top_select">待回款</li>
+					<li>已回款</li>
+					<!--<li>募集中</li>-->
+				</ul>
+
+				<!--待回款-->
+				<div class="li_se" id="invest_a">
+					<div class="hkje_all" v-cloak>
+						<h1>待回款金额（元）</h1>
+						<h2>{{total}}</h2>
+						<div class="hkje_m">
+							<h3>待回款本金(元)</h3>
+							<h4>{{account}}</h4>
+						</div>
+						<div class="hkje_m">
+							<h3>待回款利息（元）</h3>
+							<h4>{{interest}}</h4>
+						</div>
+					</div>
+					<ul class="hkje_u">
+						<li v-for="list in lists" v-cloak v-bind:nid="list.id">
+							<div class="hkje_left">
+								<h1>{{list.interest}}</h1>
+								<h2>到期收益</h2>
+							</div>
+							<div class="hkje_right">
+								<h1>{{list.name}}<span>{{list.nid}}</span></h1>
+								<h2>投资金额：<span>{{list.account}}</span>元</h2>
+							</div>
+							<div class="hkje_bot">
+								<h1>投资日期&nbsp;{{list.invest_time}}</h1>
+								<h2>到期日期&nbsp;{{list.end_time}}</h2>
+							</div>
+						</li>
+					</ul>
+					<div class="nothing noth_a">
+						<img src="../images/nothig/tz_not.png" />
+						<h1>您还没有投资哦~</h1>
+						<button class="noth_btn och_index_xm">立即投资</button>
+					</div>
+				</div>
+
+				<!--已回款-->
+				<div class="li_se" id="invest_b" style="display: none;overflow: hidden;">
+					<ul class="hkje_u">
+						<li v-for="list in lists" v-cloak v-bind:nid="list.id">
+							<div class="hkje_left">
+								<h1>{{list.interest}}</h1>
+								<h2>到期收益</h2>
+							</div>
+							<div class="hkje_right">
+								<h1>{{list.name}}<span>{{list.nid}}</span></h1>
+								<h2>投资金额：<span>{{list.account}}</span>元</h2>
+							</div>
+							<div class="hkje_bot">
+								<h1>投资日期&nbsp;{{list.invest_time}}</h1>
+								<h2>到期日期&nbsp;{{list.end_time}}</h2>
+							</div>
+						</li>
+					</ul>
+					<div class="nothing noth_b">
+						<img src="../images/nothig/tz_not.png" />
+
+						<button class="noth_btn och_index_xm">立即投资</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/invest.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				my_invest();
+			})
+		</script>
+	</body>
+
+</html>

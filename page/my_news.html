@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>消息中心</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<!--我的消息-->
+		
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif"/></div>
+				<ul class="gg_ul_list news_list" id="news">
+					<li v-cloak v-for="list in lists">
+						<div class="gg_time">{{list.addtime}}</div>
+						<div class="gg_list_box heauto">
+							<div class="gg_list heauto">
+								<img src="../images/ymkj/newsbg02.png" class="newsbg" />
+								<h1 style="font-size: 13px;" v-html="list.name">{{list.name}}</h1>
+								<p v-html="list.contents">{{list.contents}}</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="nothing noth">
+					<img src="../images/nothig/xx_not.png" />
+				</div>
+			</div>
+		</div>
+		<!--<script src="html5plus://ready"></script>-->
+		<!--<script src="../js/pagejs/down.js"></script>-->
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/notice.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				if(!user_id || plus.storage.getItem('load') != '1') {
+					och("page/load_zc.html", "登录/注册", 1);
+					noth();
+				} else {
+					news();
+				}
+			
+			
+			if(plus.os.name=='iOS'){
+				mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+					
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			}else{
+				mui.init({
+					pullRefresh: {
+						container: '#pullrefresh',
+						down: {
+							style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+							    color:'#fe4a33', //可选，默认“#2BD009” 下拉刷新控件颜色
+							    height:'50px',//可选,默认50px.下拉刷新控件的高度,
+							    range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+							    offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
+							    auto: false,//可选,默认false.首次加载自动上拉刷新一次
+							callback: pulldownRefresh
+						},
+						up: {
+							contentrefresh: '正在加载...',
+							callback: pullupRefresh
+						}
+					}
+				});
+			}
+			
+			/*
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					location.reload()
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+				}, 300);
+			}
+		
+			/*
+			 * 上拉加载具体业务实现
+			 */
+			var num=1;
+			function pullupRefresh() {
+				num=num + 1;
+					mui.post( weburl+'discovery/getMessage',{user_id:user_id,page:num,epage:20}, function(data){
+						if(data){
+							var html=""
+							$.each(data, function(idx,itm) {
+								html+="<li><div class='gg_time'>"+itm.addtime+"</div><div class='gg_list_box heauto'><div class='gg_list heauto'><img src='../images/ymkj/newsbg02.png' class='newsbg' /><h1 style='font-size: 13px;'>"+itm.name+"</h1><p>"+itm.contents+"</p></div></div></li>"
+								
+							});
+							$("#news").append(html)
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh();
+						}else{
+							mui.toast("没有更多数据")
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh();
+						}
+					})
+				setTimeout(function() {
+					
+				
+
+				}, 300);
+			}
+		})	
+		</script>
+	</body>
+
+</html>

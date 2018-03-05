@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>我的积分</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<link rel="stylesheet" href="../css/index1.css" />
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<style type="text/css">
+			.duihuan ul li {
+				margin: 10px;
+				height: 80px;
+			}
+			
+			.duihuan_jiaxijuan ul li {
+				background-color: #ffffff;
+				margin: 10px;
+				height: 80px;
+				overflow: hidden;
+			}
+			
+			.duihuan .duihuan_left {
+				overflow: hidden;
+				background-color: #ffffff;
+				width: 100px;
+				height: 80px;
+				float: left;
+				padding: 20px 0 0 32px;
+				background: url(../images/hb.png) no-repeat;
+				color: #fff;
+				font-size: 18px;
+			}
+			
+			.duihuan_jiaxijuan .duihuan_left {
+				width: 100px;
+				height: 80px;
+				float: left;
+				padding: 25px 0 0 12px;
+				background: url(../images/ymkj/jxqbg.png) no-repeat;
+				background-size: contain;
+				color: #fff;
+				font-size: 18px;
+			}
+			
+			.duihuan_right {
+				padding: 8px;
+				float: left;
+			}
+			
+			.duihuan_right>div {
+				float: left;
+				width: 150px;
+				height: 80px;
+			}
+			
+			.duihuan_right h3 {
+				margin: 8px 0;
+				color: #000000;
+			}
+			
+			.duihuan_right h4 {
+				color: #000000;
+			}
+			
+			.duihuan_right button {
+				background-color: orangered;
+				color: #ffffff;
+				padding: 3px 8px;
+				margin-top: 20px;
+			}
+			
+			.duihuan_right .jiajian {
+				background-color: #fff;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				margin: 0 2px 0 6px;
+				border: 1px solid #fff;
+			}
+			
+			.jia,
+			.jian {
+				border: 1px solid #ccc;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div class="banlik_box" style="display: none;">
+					<div id="jf" v-cloak>
+						<div class="jf_head">
+							<div>我的积分
+								<div>{{total}}</div>
+							</div>
+						</div>
+						<ul class="top_nav">
+							<li class="jf_nav top_select" reg="0" stylea="2">积分日志</li>
+							<li class="jf_nav" reg="1" stylea="0">兑换红包</li>
+							<li class="jf_nav" reg="2" stylea="1">兑换加息券</li>
+						</ul>
+						<div style="display: none;" class="jf_cont">
+							<div class="jf_cont_top">
+								<span style="width: 15%;">积分</span>
+								<span style="width: 15%;">类型</span>
+								<span style="width: 35%;">时间</span>
+								<span style="width: 30%;">来源</span>
+							</div>
+							<div class="jf_cont_bottom">
+								<div v-for="item in items">
+									<span style="width: 10%;">{{item.jifen}}</span>
+									<span style="width: 15%;">{{item.type}}</span>
+									<span style="width: 35%;">{{item.time}}</span>
+									<span style="width: 30%;text-align: left;">{{item.des}}</span>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div id="duihuanjifen">
+							<div style="display: none;" class="duihuan" id="duihuan">
+
+								<ul>
+									<li :id="item.id"  v-for="item in items0" v-cloak>
+										<div class="duihuan_left">
+											<span>{{item.money}}</span>元
+										</div>
+										<div class="duihuan_right">
+											<div>
+												<h3>所需积分：<span class="xjkjf">{{item.score}}</span></h3>
+												<h4>兑换数量  <span class="jian">-</span><span class="jiajian">1</span>  <span :num="item.num" class="jia">+</span>张</h4>
+											</div>
+											<button class="confirmBtn" type="button">立即兑换</button>
+										</div>
+									</li>
+									
+
+								</ul>
+							</div>
+							<div style="display: none;" class="duihuan_jiaxijuan" id="duihuan_jiaxijuan">
+								<ul>
+									<li :id="item.id" v-for="item in items1"  v-cloak>
+										<div class="duihuan_left">
+											<span>{{item.interest}}</span>
+										</div>
+										<div class="duihuan_right"> 
+											<div>
+												<h3>所需积分：<span>{{item.score}}</span></h3>
+												<h4>兑换数量  <span class="jian">-</span><span class="jiajian">1</span>  <span class="jia">+</span>张</h4>
+											</div>
+											<button class="confirmBtn" type="button">立即兑换</button>
+										</div>
+									</li>
+									
+
+								</ul>
+							</div>
+						</div>
+				</div>
+			</div>
+
+			<script src="../js/common.js"></script>
+			<script src="../js/pagejs/invite.js"></script>
+			<script src="../js/pagejs/share.js"></script>
+			<script src="../js/pagejs/down.js"></script>
+			<script src="../js/clipboard.min.js"></script>
+			<script src="../js/pagejs/integration.js"></script>
+	</body>
+
+</html>

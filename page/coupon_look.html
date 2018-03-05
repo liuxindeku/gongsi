@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>加息券红包</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+
+		<!--加息券红包_查看-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				
+				<ul class="top_nav wid50 xjjx_nav">
+					<li class="top_select" reg="0">红包</li>
+					<li reg="1">加息券</li>
+				</ul>
+				<!--红包-->
+				<div class="li_se">
+					<!--<div class="dh_yes">
+			<div class="dh_yes_center">
+				<img src="../images/ymkj/dhhbbg.png" class="dh_jh"/>
+				<h2>兑换红包</h2>
+			</div>
+		</div>-->
+					<div class="xmbox  mt10" id="look_a">
+ 
+						<ul>
+							<li v-for="list in lists" v-cloak>
+
+								<div class="xmhb_head">
+									<img src="../images/ymkj/nouse.png" />
+									<h2>{{list.money}}
+										<span>元</span>
+									</h2>
+									<h3>{{list.coupon_name}}</h3>
+								</div>
+								<div style="right: 30px;" class="xmhb_cont">
+									<h4>投资金额：≥{{list.min}}元</h4>
+									<h4>投资期限：≥{{list.min_day}}天</h4>
+									<h5>有效期{{list.valid}}天   &nbsp; &nbsp; &nbsp;&nbsp;{{list.exptime}}过期</h5>
+								</div>
+								<img src="../images/ymkj/hb_selected.png" class="hbselect" />
+							</li>
+						</ul>
+						
+					</div>
+					<div class="nothing notha">
+						<img src="../images/nothig/xjq_not.png" />
+						<h1>您当前没有可用红包哦~</h1>
+					</div>
+					<div class="see_thing och_coupon_over">查看已失效的红包</div>
+				</div>
+				<!--加息券-->
+				<div class="li_se" style="display: none;">
+					<!--<div class="dh_yes">
+			<div class="dh_yes_center">
+				<img src="../images/ymkj/dhhbbg.png" class="dh_jh"/>
+				<h2 >兑换加息券</h2>
+			</div>
+		</div>-->
+					<div class="xmbox mt10" id="look_b">
+
+						<ul>
+							<li v-for="list in lists" v-cloak>
+
+								<div class="xmhb_head">
+									<img src="../images/ymkj/jxqbg.png"/>
+									<h6>{{list.interest}}<span>%</span></h6>
+								</div>
+								<div style="right: 30px;" class="xmhb_cont">
+									<h4>投资金额：≥{{list.min}}元</h4>
+									<h4>投资期限：≥{{list.min_day}}天</h4>
+									<h5>有效期{{list.valid}}天   &nbsp; &nbsp; &nbsp;&nbsp;{{list.exptime}}过期</h5>
+								</div>
+								<img src="../images/ymkj/hb_selected.png" class="hbselect" />
+							</li>
+						</ul>
+					</div>
+
+					<div class="nothing nothb">
+						<img src="../images/nothig/jxq_not.png" />
+						<h1>您当前没有可用加息券哦~</h1>
+					</div>
+					<div class="see_thing och_coupon_over">查看已失效的加息券</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/coupon.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				if(!user_id || plus.storage.getItem('load') != '1') {
+					och("page/load_zc.html", "登录/注册", 1);
+					noth();
+				} else {
+					looka();
+					lookb();
+				}
+			})
+			mui(".top_nav").on("tap", "li", function() {
+				var reg = $(this).attr("reg");
+				if(reg == '0') {
+					looka();
+				} else if(reg == '1') {
+					lookb();
+				}
+				var in_num = $(this).index();
+				$(".top_nav li").removeClass("top_select");
+				$(this).addClass("top_select");
+				$(".li_se").hide().eq(in_num).show();
+			})
+		</script>
+	</body>
+
+</html>

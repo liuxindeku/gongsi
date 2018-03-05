@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>项目详情</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif"/></div>
+				<!--项目详情-->
+				<div id="content" v-cloak>
+									
+					<ul class="xmcont">
+						<li>
+							<h1>项目名称</h1>
+							<h2>{{name}}{{nid}}</h2>
+						</li>
+						<li>
+							<h1>年化收益率</h1>
+							<h2>{{apr_base}}% <span v-if="apr_extra>0">+{{apr_extra}}%</span></h2>
+						</li>
+						<li>
+							<h1>募集资金</h1>
+							<h2>{{account}}元</h2>
+						</li>
+						<li>
+							<h1>起投金额</h1>
+							<h2>起投金额为{{min}}元</h2>
+						</li>
+
+						<li>
+							<h1>计息方式</h1>
+							<h2>{{style_title}}</h2>
+						</li>
+
+					</ul>
+					<div class="intro_detail">
+						<!--<div class="intro_tit">
+							<i></i>
+							<h1>项目介绍</h1>
+						</div>-->
+						<p class="intp"></p>
+						<!--<p class="intp">项目原始债权主要为通过平台合作机构- 狒狒人品推荐的借款项目，注重流动性及安全性。</p>
+						<p class="intp">用户持有本项目期间本项目原始债权出现到期、提前到期情形的，相对应的用户投资金额将通过平台系统自动匹配至新的借款项目中。本项目实时债权情况用户可通过项目页面进行了解、查询。</p>
+						<p class="intp">本项目期限届满，部分或全部原始债权尚未到期的，用户所持有的债权份额将通过平台债权转让系统转让于平台其他投资用户。转让成功用户即退出本项目。</p>-->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/pagejs/tender_detail.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function(){
+				plusReady();
+				tender_detail();
+			})
+		</script>
+	</body>
+
+</html>

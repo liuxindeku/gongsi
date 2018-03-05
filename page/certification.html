@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>实名认证</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--实名认证-->
+				<ul class="cgzh">
+					<li>
+						<h1>真实姓名</h1>
+						<input type="text" placeholder="请输入您的名字" id="realname" />
+					</li>
+					<li>
+						<h1>身份证号码</h1>
+						<input type="text" placeholder="请输入您的证件号码" id="card_id" />
+					</li>
+					<li>
+						<h1>银行卡号</h1>
+						<input type="text" placeholder="仅能绑定一张卡" id="account" />
+						
+						<div style="position: absolute;right: 0;;transform: scale(0.5);"  class="och_limit wenhao" ><img src="../images/wenhao.png" /></div>
+					</li>
+					<!--<li>
+				<h1>银行名称</h1>
+				<input type="text" placeholder="请选择银行名称" />
+			</li>-->
+				</ul>
+				<ul class="cgzh">
+					<li>
+						<h1>银行手机预留号</h1>
+						<input type="text" placeholder="请输入您的手机号码" id="phone" />
+					</li>
+				</ul>
+				<div id="tpyzm" style="width: 100%;">
+					<input type="text" class="pic" name="pic" maxlength="4" placeholder="请输入图片验证码" style="width: 70%;padding-left: 15px;border: 0 none;margin: 5px 0;" />
+					<img class="yzm" src="/imgcode" id="valicode2" alt="点击刷新" style="width: 20%; padding-top: 0px;margin-bottom: -10px;display: inline-block;">
+				</div>
+				<ul class="cgzh">
+					<li style="position: relative;">
+						<h1>验证码</h1>
+						<input type="text" placeholder="请输入手机验证码" id="code" />
+						<button type="button" class="yzm_true">获取验证码</button>
+					</li>
+				</ul>
+				<button class="cz_true">下一步</button>
+
+			</div>
+		</div>
+		<div class="winbox cgzh_go">
+			<div class="winbg"></div>
+			<div class="win_cont">
+				<h1>实名认证成功</h1>
+				<h2>恭喜您！<br />您的实名认证已成功！</h2>
+				<div class="ktnow och_change_buspwd">去设置交易密码</div>
+				<div class="ktno och_index_local">返回我的账户</div>
+			</div>
+		</div>
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/certification.js"></script>
+
+	</body>
+
+</html>

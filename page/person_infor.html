@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>个人信息</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+	<!--个人信息-->
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div id="about_pages" v-cloak>
+					<div id="renzheng">
+						<ul class="user_li per_info">
+
+							<li v-if="auth_status==1" v-cloak>
+								<h2>实名认证</h2>
+								<h3></h3>
+								<h6>已认证</h6>
+							</li>
+							<li class="och_certification" v-else v-cloak>
+								<h2>实名认证</h2>
+								<h3></h3>
+								<h5>立即认证</h5>
+							</li>
+							<li>
+								<h2>绑定手机</h2>
+								<h3></h3>
+								<h6 v-cloak>{{phone_hide}}</h6>
+							</li>
+							<!--<li class="och_adress">
+								<h2>收货地址</h2>
+								<h3></h3>
+							</li>-->
+							<!--<li onclick="">
+					<h2>绑定邮箱</h2>
+					<h3></h3>
+					<h6>wm@51jingang.com</h6>
+				</li>-->
+						</ul>
+					</div>
+
+					<ul class="user_li">
+						<li>
+							<h2>银行卡</h2>
+							<h6 v-cloak>{{bank_name}}&nbsp;<span v-if="last_number">尾号</span>{{last_number}}&nbsp;&nbsp;<button v-if="auth_status=='1'" class="och_ljjb">立即解绑</button></h6>
+							
+						</li>
+					</ul>
+
+					<ul class="user_li">
+						<li class="och_find_logpwd1">
+							<h2>修改登录密码</h2>
+							<h3></h3>
+						</li>
+						<li class="och_change_buspwd" v-cloak v-if="paypwd">
+							<h2>修改交易密码</h2> 
+							<h3></h3>
+						</li>
+						<li class="och_set_buspwd" v-cloak v-else-if="auth_status=='1'">
+							<h2>设置交易密码</h2>
+							<h3></h3>
+						</li>
+
+					</ul>
+
+					<button class="cz_true  mui-btn-red lo_out" type="button">安全退出</button>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+
+				mui.post(weburl + 'discovery/getIndex', {
+					user_id: user_id
+				}, function(data) {
+					if(data) {
+						if(data.auth_status == 1) {
+							plus.storage.setItem('smrz', '1');
+						}
+						new Vue({
+							el: "#about_pages",
+							data: {
+								phone: data.phone,
+								auth_status: data.auth_status,
+								bank_name: data.bank_name,
+								total: data.total,
+								noread: data.noread,
+								phone_hide: data.phone_hide,
+								last_number: data.last_number,
+								paypwd: data.paypwd,
+								avatar: data.avatar
+							}
+						})
+
+					}
+					$("#loading").hide();
+//					
+				})
+				mui("body").on("tap", ".lo_out", function() {
+					load_out();
+					mui.toast('账号退出', {
+						duration: '1000',
+						type: 'div'
+					});
+					account("index_local.html", "我的账户")
+				})
+
+				mui("body").on("tap", ".my_news_bnt", function() {
+					mui.post(weburl + 'message/updateStatus', {
+						user_id: user_id
+					}, function(data) {
+						if(data.code == 1) {
+							console.log(data.msg)
+							$(".my_news_bnt h4 span").text("0")
+						} else {
+							console.log(data.msg)
+						}
+					})
+
+				})
+
+				if(!user_id || plus.storage.getItem('load') != '1') {
+					och("page/load_zc.html", "登录/注册", 1);
+				}
+
+//				mui("body").on("tap", ".xgjymm", function() {
+//					mui.post(weburl + 'account/resetJzh', {
+//						user_id: user_id
+//					}, function(data) {
+//						if(data.code == 1) {
+//							$("#form2").attr('action', data.url);
+//							$("#form2").html(data.msg);
+//							$("#form2").submit();
+//						} else {
+//							alert(data.msg);
+//						}
+//					})
+//				})
+				
+//				mui("body").on("tap", ".ljjb", function() {
+//					mui.post(weburl + 'withdraw/addWithdraw', {
+//						user_id: user_id
+//					}, function(data) {
+//						location.href='https://www.baidu.com';
+//					})
+//				})
+
+			})
+		</script>
+		<script src="../js/pagejs/down.js"></script>
+	</body>
+
+</html> 

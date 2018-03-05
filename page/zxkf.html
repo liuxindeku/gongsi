@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>客服反馈</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		
+</head>
+	<body>
+	
+		<script src="html5plus://ready"></script>
+		<script src="../js/common.js"></script>
+		<script src="https://qiyukf.com/script/4e59f9ae012b3488a70fe22de75ada21.js"></script>
+		<script type="text/javascript">
+		
+			if(user_id){
+			   	mui.post(weburl+"discovery/getService",{user_id:user_id},function(data){
+					if(data.code==1){
+						var real_name=data.msg.real_name;
+						var reg_date=data.msg.reg_date;
+						var last_login=data.msg.last_login
+						var sex=data.msg.sex;
+						var mobile_phone=data.msg.phone;
+						 ysf.config({
+					        "data": JSON.stringify([
+					            {"key": "real_name", "value": real_name},
+					            {"key": "mobile_phone", "value": mobile_phone},
+					            {"key": "email", "hidden": true},
+					            {"index": 1, "key": "sex", "label": "性别", "value": sex},
+					            {"index": 5, "key": "reg_date", "label": "注册日期", "value": reg_date},
+					            {"index": 6, "key": "last_login", "label": "上次登录时间", "value": last_login}
+					        ])
+					    });		
+						
+						cust()
+
+					}
+			   })
+			   	
+		  	}else{
+	  	  		cust()
+			
+		  	}
+			
+		  	function cust(){
+		  		$("#YSF-BTN-HOLDER").click();
+		  	}
+		</script>
+	</body>
+</html>

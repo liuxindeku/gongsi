@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>邀请好友</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../css/new.css" />
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<style type="text/css">
+						#content{width: 100%;}
+						#content img{
+							width: 100%;
+						}
+					</style>
+	</head>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="loading"><img src="../img/loading2.gif" /></div>
+				<div id="new" class="banlik_box" style="background: #860ce6; display: none;" v-cloak>
+					<div id="content">
+					 {{contents}}
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/common.js"></script>
+		<!--<script src="../js/pagejs/new.js"></script>-->
+		<script src="../js/pagejs/down.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				xmid = plus.storage.getItem('cid');
+				mui.post(weburl + 'articles/getDetail', {
+					id:xmid
+				}, function(data) {
+					$("#content").html(data.contents);
+					$("#loading").hide();
+					$(".banlik_box").show();
+				})
+			})
+		</script>
+	</body>
+
+</html>

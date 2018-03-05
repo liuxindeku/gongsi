@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>活动公告</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+</head>
+	<body>
+		<!--公告动态-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+		<ul class="gg_ul_list" id="list">
+			<li  skurl="page/notice_detail.html" v-bind:skid="list.id" skname='公告'  class="c_list"  v-cloak v-for="list in lists">
+				<div class="gg_time">{{list.publish}}</div>
+				<div class="gg_list_box listb"> 
+					<div class="gg_list "> 
+						<h1>{{list.name}}</h1>
+					
+					</div>
+				</div>
+			</li>
+		</ul>
+		</div>
+		</div>
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/notice.js"></script>	
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				list()
+			})
+		</script>
+	</body>
+</html>

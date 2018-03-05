@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>金刚金服</title>	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="misapplication-tap-highlight" content="no"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<link rel="stylesheet" href="css/style.css"  charset="UTF-8"/>
+	<link rel="stylesheet" href="css/ymkj.css"  charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="css/index1.css" media="screen, projection" />
+	<style>
+		* {
+			-webkit-touch-callout:none;
+			-webkit-user-select:none; 
+			-khtml-user-select:none; 
+			-moz-user-select:none;
+			-ms-user-select:none; 
+			user-select:none; 
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	
+	<script src="js/mui.min.js"></script>
+</head>
+<body>
+<header>	
+	<h1 id="title">金刚金服</h1>  
+	<!--<a id="kfbtn" url="#" class="btnHr_b"   onclick="och('page/custom.html','客服与反馈',1)"><img src="images/ymkj/kf_bnt.png" class="topnav_bnt_b zxkf"/></a>
+	<a id="flushbtn" url="#" class="btnHr"><img src="images/ymkj/return_bnt.png" class="topnav_bnt"/></a>-->
+	<div class="gonggao">
+		<div class="och_notice_list"><img src="images/gonggao.png" /></div>
+	</div> 
+</header> 
+<footer> 
+	<a id="home" ontouchend="aclick(this,'main.html','金刚金服',false)"  class="current"><i class="lzd-sy"></i>首页</a>
+	<a id="list" ontouchend="aclick(this,'tender.html','理财超市',false)"><i class="lzd-list"></i>理财超市</a>
+	<a id="account" ontouchend="aclick(this,'users.html','我的账户',false)"><i class="lzd-myacount"></i>账户</a>
+	<a id="more" ontouchend="aclick(this,'about_page.html','发现更多',false)" > <i class="lzd-more"></i>发现</a>
+</footer>
+<script src="html5plus://ready"></script> 
+<script src="js/common.js"></script> 
+<script src="js/index.js" ></script>
+<script src="js/pagejs/update.js"></script> 
+<script src="js/pagejs/down.js"></script>
+<script language="JavaScript">
+	var cpage="home";//默认首页选中
+	//初始化页面
+	function initweb(){   
+		
+		openw('home','main.html',false,false);//调用openw 打开home页面
+		
+		// 关闭启动界面
+		setTimeout(function(){
+			plus.navigator.closeSplashscreen(); //加载时间超过5s关闭程序启动界面
+		}, 3000);
+		//ios禁止返回
+		plus.webview.currentWebview().setStyle({
+                        'popGesture': 'none'
+        });
+		 //安卓退出返回操作
+		mui.back=function () {  
+                    if (!$.__back__first) {
+								$.__back__first = new Date().getTime();
+								mui.toast('再按一次退出应用');
+								setTimeout(function() {
+									$.__back__first = null;
+								}, 2000);
+							} else {
+								if (new Date().getTime() - $.__back__first < 2000) {
+									plus.runtime.quit();
+								}
+					} 
+            } 
+	}
+	
+	initweb();  
+	appupdate();   
+ 
+</script>
+<div class="gx_box"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>投资记录</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+		<!--投资记录-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="histbox">
+					<table border="0" cellspacing="0" cellpadding="0" class="hist_tz" id="hist_tz">
+						<tr class="tab_head">
+							<td>投资用户</td>
+							<td>投资金额</td>
+							<td class="tab_right">投资时间</td>
+						</tr>
+						<tr v-for="inv in invs" v-cloak>
+							<td>
+								<p>{{inv.phone}}</p>
+								<!--<img src="../images/ymkj/phoneload.png" class="phoneload"/>--></td>
+							<td>{{inv.account}}</td>
+							<td class="tab_right">{{inv.time}}</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="html5plus://ready"></script>-->
+		<script src="../js/pagejs/down.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/pagejs/hist_invest.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				plusReady();
+				hist_invest();
+			})
+		</script>
+	</body>
+
+</html>

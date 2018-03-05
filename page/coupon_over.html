@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>加息券红包</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/select.js"></script>
+		<script src="../js/vue.js"></script>
+</head>
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+ 		<div class="mui-scroll">
+		<!--加息券红包_失效-->
+		<ul class="top_nav wid50 xjjx_nav">
+			<li class="top_select">红包</li>
+			<li>加息券</li>
+		</ul>
+		<!--红包-->
+	<div class="li_se">	
+		<!--<div class="dh_yes">
+			<div class="dh_yes_center">
+				<img src="../images/ymkj/dhhbbg.png" class="dh_jh"/>
+				<h2>兑换红包</h2>
+			</div>
+		</div>-->
+		<div class="xmbox mt10">
+			<ul id="look_a">
+				<li v-for="list in lista" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/usedbag.png" />
+						<h2 style="color: #AFAFAF;">{{list.money}}<span>元</span></h2>
+						<h3>{{list.coupon_name}}</h3>
+					</div>
+					<div class="xmhb_cont">
+						<h4>投资金额：≥{{list.min}}元</h4>
+						<h4>投资期限：≥{{list.min_day}}天</h4>
+						<h5>有效期{{list.valid}}天   &nbsp; &nbsp; &nbsp;&nbsp;{{list.exptime}}过期</h5>
+					</div>
+					<img src="../images/ymkj/used.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+			<ul id="look_b">
+				<li v-for="list in listb" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/usedbag.png" />
+						<h2 style="color: #AFAFAF;">{{list.money}}<span>元</span></h2>
+						<h3>{{list.coupon_name}}</h3>
+					</div>
+					<div class="xmhb_cont">
+						<h4>投资金额：≥{{list.min}}元</h4>
+						<h4>投资期限：≥{{list.min_day}}天</h4>
+						<h5>有效期{{list.valid}}天   &nbsp; &nbsp; &nbsp;&nbsp;{{list.exptime}}过期</h5>
+					</div>
+					<img src="../images/ymkj/used.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+			<ul id="look_c">
+				<li v-for="list in listc" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/usedbag.png" />
+						<h2 style="color: #AFAFAF;">{{list.money}}<span>元</span></h2>
+						<h3>{{list.coupon_name}}</h3>
+					</div>
+					<div class="xmhb_cont">
+						<h4>投资金额：≥{{list.min}}元</h4>
+						<h4>投资期限：≥{{list.min_day}}天</h4>
+						<h5>有效期{{list.valid}}天   &nbsp; &nbsp; &nbsp;&nbsp;{{list.exptime}}过期</h5>
+					</div>
+					<img src="../images/ymkj/notdate.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+		</div>
+		<div class="nothing notha" style="display: block;">
+			<img src="../images/nothig/xjq_not.png"/>
+		</div>
+	</div>
+		<!--加息券-->
+	<div class="li_se">
+		<!--<div class="dh_yes">
+			<div class="dh_yes_center">
+				<img src="../images/ymkj/dhhbbg.png" class="dh_jh"/>
+				<h2>兑换加息券</h2>
+			</div>
+		</div>-->
+		<div class="xmbox mt10">
+			<ul id="look_d"> 
+				<li v-for="item in itema" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/jxqbg_notuse.png"/>
+						<h6>{{item.interest}}<span>%</span></h6>
+					</div>
+					<div class="xmhb_cont">
+						<h4>满{{item.min}}<span v-if="list.max">-{{item.max}}</span>元</h4>
+						<h4>标的期限{{item.min_day}}天</h4>
+						<h5>使用有效期至  {{item.exptime}}</h5>
+					</div>
+					<img src="../images/ymkj/notuse02.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+			<ul id="look_e">
+				<li v-for="item in itemb" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/jxqbg_notuse.png"/>
+						<h6>{{item.interest}}<span>%</span></h6>
+					</div>
+					<div class="xmhb_cont">
+						<h4>满{{item.min}}<span v-if="item.max">-{{item.max}}</span>元</h4>
+						<h4>标的期限{{item.min_day}}天及以上使用</h4>
+						<h5>使用有效期至  {{item.exptime}}</h5>
+					</div>
+					<img src="../images/ymkj/notuse02.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+			<ul id="look_f">
+				<li v-for="item in itemc" v-cloak>
+					<div class="xmhb_head">
+						<img src="../images/ymkj/jxqbg_notuse.png"/>
+						<h6>{{item.interest}}<span>%</span></h6>
+					</div>
+					<div class="xmhb_cont">
+						<h4>满{{item.min}}<span v-if="item.max">-{{item.max}}</span>元</h4>
+						<h4>标的期限{{item.min_day}}天</h4>
+						<h5>使用有效期至  {{item.exptime}}</h5>
+					</div>
+					<img src="../images/ymkj/notuse01.png" alt=""  class="notuse"/>
+				</li>
+			</ul>
+		</div>
+		<div class="nothing nothb" style="display: block;">
+			<img src="../images/nothig/jxq_not.png"/>
+		</div>
+	</div>	
+	</div>
+</div>
+	<!--<script src="html5plus://ready"></script>-->
+	<script src="../js/common.js"></script>
+	<script src="../js/pagejs/coupon.js"></script>
+	<script src="../js/pagejs/down.js"></script>
+	<script type="text/javascript">
+		mui.plusReady(function(){
+			plusReady();
+			if(!user_id ||plus.storage.getItem('load')!='1' ){
+				och("page/load_zc.html","登录/注册",1);
+				noth();
+			}else{
+				over();
+			}
+		})
+	</script>
+	</body>
+
+</html>

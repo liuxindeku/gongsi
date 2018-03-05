@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>安全保障</title>
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="../css/jgjf.css" type="text/css" media="screen, projection" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/style1.css" />
+		<script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script>
+</head>
+	<body onmousewheel="return false;">
+	
+		<!--安全保障-->
+		<div class="container">
+			<div class="page page0 cur">
+				<div class="safety" style="background-image: url(../images/safety_04a.png)">
+					<img src="../images/safety_04b.png" class="safety_bot" />
+					<h1>账户安全</h1>
+					<img src="../images/safety_04c.png" class="safety_cobg" />
+					<p>金刚金服为响应监管政策要求，保障投资人<br /> 资金安全，金刚金服调研多家银行，
+						<br /> 积极推进银行存管战略合作洽谈，实现银行资金存管。
+					</p>
+					<img src="../images/ladown.png" class="ladown" />
+				</div>
+
+			</div>
+			<div class="page page2">
+
+				<div class="safety" style="background-image: url(../images/safety_02a.png)">
+					<img src="../images/safety_02b.png" class="safety_bot" />
+					<h1>数据安全</h1>
+					<img src="../images/safety_02c.png" class="safety_cobg" />
+					<p>金刚金服技术团队成员均来自国内领先技术公司，<br /> 拥有丰富的行业经验，确保了网站的安全平稳运行，
+						<br /> 并采用业界先进的加密技术，对用户注册信息、账户收支
+						<br /> 信息进行高强度加密处理。
+					</p>
+					<img src="../images/ladown.png" class="ladown" />
+				</div>
+
+			</div>
+			<div class="page page1">
+
+				<div class="safety" style="background-image: url(../images/safety_03a.png)">
+					<img src="../images/safety_03b.png" class="safety_bot" />
+					<h1>风控措施</h1>
+					<img src="../images/safety_03c.png" class="safety_cobg" />
+					<p>在借款人提交申请之后，信审风控团队将对借款人<br /> 进行严格、谨慎的当面审核，对借 款人进行重征信综合<br /> 评定，归集多方证明资料，三级风控评审，采用交叉
+						<br /> 校验手段审查借款方真实情况，保障风险可控。
+					</p>
+					<img src="../images/ladown.png" class="ladown" />
+				</div>
+
+			</div>
+ 
+			
+
+			<div class="page page3">
+
+				<div class="safety" style="background-image: url(../images/safety_01a.png)">
+					<img src="../images/safety_01b.png" class="safety_bot" />
+					<h1>法律监督</h1>
+					<img src="../images/safety_01c.png" class="safety_cobg" />
+					<p>金刚金服平台所有行为，均在浙江律师事务所的监督下<br /> 进行，平台的业务和经营活动完全符合国家相关法律与政策
+						<br /> 规定。金刚金服坚决维护反洗钱、金融犯罪，平台用户
+						<br /> 账户均需实名认证，确保一人一户。
+					</p>
+
+				</div>
+
+			</div>
+			
+		</div>
+		<!--效果html结束-->
+
+		<script type="text/javascript">
+			$(document).ready(
+				function() {
+					var nowpage = 0;
+					//给最大的盒子增加事件监听
+					$(".container").swipe({
+						swipe: function(event, direction, distance, duration, fingerCount) {
+
+							if(direction == "up") {
+
+								nowpage = nowpage + 1;
+
+							} else if(direction == "down") {
+
+								nowpage = nowpage - 1;
+
+							}
+							if(nowpage > 3) {
+
+								nowpage = 3;
+
+							}
+							if(nowpage < 0) {
+
+								nowpage = 0;
+
+							}
+							$(".container").animate({
+								"top": nowpage * -100 + "%"
+							}, 400);
+							$(".page").eq(nowpage).addClass("cur").siblings().removeClass("cur");
+						}
+					});
+				}
+			);
+		</script>
+		<script src="../js/common.js"></script>
+	</body>
+
+</html>

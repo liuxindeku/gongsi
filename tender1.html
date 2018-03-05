@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable = no">
+		<title>金刚金服</title>
+		<meta name="robots" content="index,follow"/>
+		<meta http-equiv="Site-Enter" content="blendTrans(Duration=0.5)" />
+		<link rel="stylesheet" href="demo-files/demo.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/fonts.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/mui.min.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/css.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="css/ymkj.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/jgjf.css" media="screen, projection" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/vue.js"></script> 
+	</head> 
+	<body> 
+		 
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+ 		<div class="mui-scroll">
+ 			<div id="loading"><img src="img/loading2.gif"/></div>
+		<div class="content tender_ul" id="tender" v-cloak>
+			<div class="connerdiv invest">
+				<div class="list " >
+					<ul class="mui-table-view new"> 
+						<li class="mui-table-view-cell fn-clear fn_cont tender_li "  v-for="kt in kts"  v-cloak v-bind:rag='kt.nid' >	
+							<h2>{{kt.name}}&nbsp;&nbsp;{{kt.nid}}</h2>
+							<img src="images/ymkj/newper.png" class="newperbg" v-if="kt.tiro=='1'" />
+							<div class="spa"></div>
+							<div class="sylist_left wid100">
+								<p class="lilv"><span>{{kt.apr1}}</span>% <i v-if="kt.apr_extra>0">+{{kt.apr_extra}}%</i></p>
+								<p>{{kt.period}}</p>
+								<p class="sylist_left_djs" v-bind:rag='kt.begin_time' v-if="kt.begin_time" ></p>
+							</div>
+							<div class="spa"></div>
+							<div class="jdt_box">
+								<div class="jdt_l" v-bind:tag='kt.scale'> 
+									<img src="images/ymkj/jdt.png" class="jdt_c" style="height: 5px;"/>
+								</div>
+								<div class="ld">{{kt.scale}}%</div>
+							</div>
+							<h6>剩余金额<span>&nbsp;{{kt.wait}}&nbsp;</span>元</h6>
+						</li>
+					</ul> 
+					<div class="mbxm" v-cloak>
+						<div class="mbxmbg"></div>
+						<h1>以下为近期已满标项目</h1>
+					</div>
+					<ul class="mui-table-view new mb_xm">
+						<li class="mui-table-view-cell fn-clear fn_cont tender_li"  v-for="yt in yts" v-cloak v-bind:rag='yt.nid'  >
+							<h2>{{yt.name}}&nbsp;&nbsp;{{yt.nid}}</h2>
+							<img src="images/ymkj/newper_b.png" class="newperbg" v-if="yt.tiro=='1'"/>
+							<div class="spa"></div>
+							<div class="sylist_left wid100">
+								<p class="lilv"><span>{{yt.apr1}}</span>% <i v-if="yt.apr_extra>0">+{{yt.apr_extra}}%</i></p>
+								<p>{{yt.period}}</p>
+							</div>
+							<div class="spa"></div>
+							<div class="jdt_box pad0">
+								<div class="jdt_l" style="background: #ccc !important;"></div>
+							</div>
+							<h6>剩余金额<span>{{yt.wait}}</span>元</h6>
+						</li>
+					</ul>
+					<div class="footer_tx" style="margin-top: 20px;margin-bottom: 0;">——市场有风险，投资需谨慎——</div>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+		<!--<script src="html5plus://ready"></script>--> 
+		<script src="js/pagejs/down.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/pagejs/tender.js"></script>
+	</body>
+
+</html>
